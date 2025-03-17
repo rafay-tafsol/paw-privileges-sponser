@@ -113,3 +113,60 @@ body {
   height: 100% !important;
   position: relative;
 }
+/* sss */
+
+.flexColGap {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.flexGap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.flexBetween {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.width {
+  width: 100%;
+}
+.height {
+  height: 100%;
+}
+
+.fitContent {
+  width: fit-content !important;
+}
+
+.globalText {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-skip-ink: none;
+  text-decoration-thickness: auto;
+  text-underline-offset: auto;
+  cursor: pointer;
+}
+
+.profile {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  position: relative;
+}
+
+.flexEnd {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}

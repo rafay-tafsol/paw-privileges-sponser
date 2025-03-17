@@ -1,0 +1,39 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.mainContent {
+  height: calc(100vh - 100px);
+  display: flex;
+  gap: 20px;
+  padding-top: 25px;
+}
+
+.mainContent::-webkit-scrollbar,
+.content::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+.mainContent::-webkit-scrollbar-track,
+.content::-webkit-scrollbar-track {
+  background: var(--Pale-Peach);
+  border-radius: 5px;
+}
+
+/* Handle */
+.mainContent::-webkit-scrollbar-thumb,
+.content::-webkit-scrollbar-thumb {
+  background: var(--main-color);
+  border-radius: 5px;
+}
+
+.content {
+  flex: 1;
+  overflow-y: auto;
+  position: relative;
+  padding: 0 20px 30px;
+  margin-bottom: 20px;
+}

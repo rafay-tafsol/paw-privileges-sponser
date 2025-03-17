@@ -1,0 +1,38 @@
+.Header {
+  height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--Woodsmoke-200);
+  padding: 0px 40px;
+}
+
+.logo {
+  position: relative;
+  width: 100px;
+  height: 72px;
+}
+
+.profile {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: relative;
+}
+
+.rightHeader {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.rightHeader {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.profileImage {
+  cursor: pointer;
+}

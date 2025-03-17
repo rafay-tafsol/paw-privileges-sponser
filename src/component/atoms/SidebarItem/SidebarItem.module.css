@@ -1,0 +1,32 @@
+.iconImage {
+  width: 40px;
+  height: 40px;
+  position: relative;
+}
+
+.sidebarItem p {
+  color: var(--main-color);
+  text-align: center;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.sidebarItem {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.active {
+  background-color: var(--dusty-rose);
+  border-radius: 10px;
+  box-shadow: 0px 1px 12px 0px rgba(0, 0, 0, 0.08);
+  padding: 10px;
+}
+
+.linkStyle {
+  text-decoration: none;
+}

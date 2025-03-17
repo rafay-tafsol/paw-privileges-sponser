@@ -1,9 +1,12 @@
-import React from 'react'
+import DashboardTemplate from "@/component/templates/dashboard/Dashboard";
+import React from "react";
 
 const Home = () => {
   return (
-    <div>page</div>
-  )
-}
+    <div>
+      <DashboardTemplate />
+    </div>
+  );
+};
 
-export default Home
+export default Home;
