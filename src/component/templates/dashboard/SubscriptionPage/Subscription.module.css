@@ -1,0 +1,9 @@
+.tabs {
+  padding-block: 24px;
+}
+.header h3 {
+  color: var(--main-color);
+  font-size: 24px;
+  font-weight: 500;
+  padding-block: 24px;
+}

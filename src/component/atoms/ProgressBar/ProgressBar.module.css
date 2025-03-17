@@ -1,0 +1,21 @@
+.progressContainer {
+  width: 100%;
+  background-color: #e5e7eb;
+  border-radius: 9999px;
+  overflow: hidden;
+  height: 12px; /* Default height */
+}
+
+.progressBar {
+  height: 100%;
+  width: 0%;
+  background-color: #3b82f6;
+  border-radius: 8px;
+  background: linear-gradient(
+    90deg,
+    #e5c0bd 0%,
+    #e5c0bd 51.6%,
+    #3a5254 103.21%
+  );
+  transition: width 0.3s ease-in-out;
+}

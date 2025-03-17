@@ -1,0 +1,15 @@
+.statusParent {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.statusParent h4 {
+  color: var(--main-color);
+  font-family: "Plus Jakarta Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: -0.16px;
+}

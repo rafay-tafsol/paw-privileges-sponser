@@ -1,0 +1,49 @@
+.Container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.input {
+  width: 100%;
+  height: 45px;
+  border: 0.5px solid var(--field_stroke_color) !important;
+  border-radius: 5px;
+}
+
+.disabledLabel {
+  color: var(--disabled-label-color) !important;
+}
+
+.label {
+  color: var(--Mine-Shaft-800);
+  text-transform: capitalize;
+  margin-bottom: 4px;
+  font-weight: 500;
+}
+
+.input label {
+  display: none;
+}
+
+.input input {
+  border-radius: inherit;
+  background-color: inherit;
+  padding: 10px 12px;
+}
+
+.input input::placeholder {
+  color: var(--Mine-Shaft-500) !important;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: -0.14px;
+  opacity: 1 !important;
+}
+
+.input input:focus {
+}
+
+.labelText {
+}

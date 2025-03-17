@@ -9,6 +9,11 @@ body {
   margin: 0%;
   box-sizing: border-box;
 }
+
+p {
+  margin: 0px;
+}
+
 .maxLine1 {
   overflow: hidden;
   display: -webkit-box;

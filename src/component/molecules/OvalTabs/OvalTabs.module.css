@@ -1,0 +1,23 @@
+.tab {
+  width: fit-content;
+  padding: 6px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  background-color: var(--cultured);
+  border-radius: 200px;
+}
+.text {
+  color: var(--main-color);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding: 8px 16px;
+  border-radius: 200px;
+}
+
+.active {
+  background-color: var(--main-color);
+  color: var(--white-color);
+}

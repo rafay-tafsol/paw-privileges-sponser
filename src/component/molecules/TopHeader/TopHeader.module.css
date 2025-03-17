@@ -1,0 +1,33 @@
+.topHeader {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.justifyRight {
+  justify-content: flex-end !important;
+  display: flex;
+  width: 100% !important;
+}
+
+.search {
+  width: 100%;
+  min-width: 60%;
+}
+
+.dropdown {
+  margin-top: 10px;
+}
+
+.dropdownCustom {
+  width: 200px !important;
+}
+
+.dateInput {
+  width: 200px !important;
+}
+
+.dateInputContainer {
+}

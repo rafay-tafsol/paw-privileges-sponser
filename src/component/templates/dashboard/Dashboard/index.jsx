@@ -1,6 +1,18 @@
 import StatesCard from "@/component/atoms/StatesCard";
 import { Col, Row } from "react-bootstrap";
 import classes from "./Dashboard.module.css";
+import BorderWrapper from "@/component/atoms/BorderWrapper";
+import SubscriptionRevenue from "@/component/atoms/SubscriptionRevenue";
+import {
+  offerAnalytics,
+  revenueGraph,
+} from "@/developmentContent/developmentData/DummyData";
+import { mergeClass } from "@/resources/utils/helper";
+import LineChart from "@/component/molecules/Chart";
+import OfferRange from "@/component/atoms/OfferRange";
+import DropDown from "@/component/molecules/DropDown/DropDown";
+import Button from "@/component/atoms/Button";
+import { PiDownloadBold } from "react-icons/pi";
 
 const DashboardTemplate = () => {
   return (
@@ -24,58 +36,43 @@ const DashboardTemplate = () => {
           </Row>
         </div>
         {/* right */}
-        {/* <div className={classes.right}>
-          <BorderWrapper>
-            <h4 className={mergeClass(`h1`)}>Revenue</h4>
-            <div className={mergeClass("flexGap",classes.type)}>
-              {revenueGraph?.map((item) => {
-                return <SubscriptionRevenue item={item} key={item?._id} />;
-              })}
-            </div>
-            <div className={classes?.LineChart}>
-            <LineChart />
+        <div className={classes.right}>
+          <BorderWrapper containerClass={classes.borderWrapper}>
+            <h4 className={mergeClass(`h1`)}>Offer Analytics</h4>
+            <div className={classes.progressBarDiv}>
+              {offerAnalytics?.map((item, index) => (
+                <OfferRange item={item} key={index} />
+              ))}
             </div>
           </BorderWrapper>
-        </div> */}
+        </div>
       </div>
-      {/* <div className={classes.table}>
-        <BorderWrapper>
-          <h4 className={mergeClass(`h1`)}>Sponsor</h4>
-          <AppTable
-            tableHeader={sponsorTableHeader}
-            data={SponsorTableData}
-            renderItem={({ item, key, rowIndex }) => {
-              const dataItem = SponsorTableData[rowIndex];
-              if (key === "name") {
-                return (
-                  <div className="flexGap">
-                    <div className={"profile"}>
-                      <Image src={dataItem?.image} fill alt="profile" />
-                    </div>
-                    <div>{dataItem?.name}</div>
-                  </div>
-                );
-              }
-              if (key === "createdAt") {
-                return <p>{moment(dataItem.createdAt).format("DD/MM/YYYY")}</p>;
-              }
-              if (key === "select") {
-                return (
-                  <HiDotsHorizontal
-                    fontSize={24}
-                    cursor={"pointer"}
-                    // onClick={() =>
-                    //   router.push(`/customer/dispute/${dataItem._id}`)
-                    // }
-                  />
-                );
-              }
-
-              return item || "";
-            }}
-          />
+      {/* bottom */}
+      <div className={classes.bottom}>
+        <BorderWrapper containerClass={classes.bottomWrapper}>
+          <div className={classes.chartHead}>
+            <div className={classes.headText}>
+              <h4 className={mergeClass(`h1`)}>20% Off Premium Dog Food</h4>
+              <p> Top Performing Offer </p>
+            </div>
+            <DropDown placeholder={"This Month"} />
+          </div>
+          <div className={classes?.LineChart}>
+            <LineChart />
+          </div>
+          <div className={classes.chartBottom}>
+            <Button
+              variant={"secondary"}
+              label={"Download Report"}
+              rightIcon={<PiDownloadBold />}
+            />
+            <span>
+              <h5>98.78%</h5>
+              <p>Rate Click</p>
+            </span>
+          </div>
         </BorderWrapper>
-      </div> */}
+      </div>
     </div>
   );
 };

@@ -1,0 +1,95 @@
+.mainContainer {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.iconBox {
+  border-radius: 5px;
+  border: 1px solid #e5e9eb;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  position: relative;
+}
+.text {
+  color: #6d6d6d;
+  font-family: var(--inter);
+  font-size: 14px;
+  font-weight: 400;
+}
+/* .iconImageDiv {
+  width: 32px;
+  height: 32px;
+  position: relative;
+} */
+.iconImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin-bottom: 6px;
+}
+
+/* .pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: max-content;
+  margin: 40px 0;
+}
+
+.pagination .btn {
+  padding: 5px 0;
+  border: none;
+  color: var(--blackClr);
+  background-color: #dadada;
+  border-radius: 50px;
+  padding: 0px;
+  padding-inline: 3px;
+  width: 30px;
+  height: 30px;
+  cursor: not-allowed;
+}
+
+.pagination .activeBtn {
+  background: var(--Linear, linear-gradient(90deg, #52a140 0%, #0db6ca 100%));
+  color: var(--white-color);
+  cursor: pointer;
+}
+
+.pagination ul {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  margin-inline: 20px;
+}
+
+.pagination ul li {
+  padding: 5px 15px;
+  color: #dadada;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.pagination .active {
+  background: var(--Linear, linear-gradient(90deg, #52a140 0%, #0db6ca 100%));
+  color: var(--white-color);
+  border-radius: 50px;
+}
+
+.pagination .btn:disabled {
+  background-color: #dadada;
+  cursor: not-allowed;
+  color: var(--white-color);
+}
+
+.pagination .btn:disabled.activeBtn {
+  background-color: #dadada;
+} */

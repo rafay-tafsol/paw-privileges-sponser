@@ -1,6 +1,7 @@
 :root {
   --white-color: #ffffff;
   --main-color: #3a5254;
+  --Mine-Shaft-300: #b0b0b0;
   --Mine-Shaft-500: #6d6d6d;
   --Mine-Shaft-800: #454545;
   --Dark-Charcoal: #333333;
@@ -17,6 +18,7 @@
   --light-gray-200: #f3f4f6;
   --light-gray-300: #eaecf0;
   --gray-100: #8d8d8d;
+  --gray-200: #cbd5e1;
   --gray-700: #374151;
   --gray-800: #404040;
   --translucent-purple: rgba(116, 89, 217, 0.2);

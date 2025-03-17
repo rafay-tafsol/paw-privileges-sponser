@@ -1,0 +1,56 @@
+.inputFields {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 24px;
+}
+
+.buttonDiv {
+  display: flex;
+  gap: 20px;
+  width: fit-content;
+}
+
+.btnLabelFont {
+  font-weight: 500;
+  width: fit-content;
+  padding-inline: 20px;
+}
+
+.labelClass {
+  gap: 2px;
+  font-size: 14px;
+}
+
+.checkMarkBox {
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--checkBox-color);
+  background: var(--white-color);
+  box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.06);
+}
+
+.twoInputs {
+  display: flex;
+  width: 100%;
+  gap: 20px;
+}
+
+.customInput {
+  width: 50% !important;
+}
+
+.customLabel {
+  display: flex;
+  flex-direction: column;
+}
+
+.labelText {
+  color: var(--Mine-Shaft-800);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: -0.16px;
+  margin-bottom: 10px;
+}

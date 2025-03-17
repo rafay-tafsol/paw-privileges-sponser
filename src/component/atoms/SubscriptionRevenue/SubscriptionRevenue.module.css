@@ -1,0 +1,30 @@
+.subscription {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.type {
+  width: 11px;
+  height: 11px;
+  flex-shrink: 0;
+  border-radius: 3;
+  background: var(--main-color);
+}
+
+.premium {
+  background-color: var(--dusty-rose);
+}
+
+.subscriptionType {
+  margin-bottom: 0px !important;
+}
+
+.amount {
+  color: var(--main-color);
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-bottom: 0px !important;
+}

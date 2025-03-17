@@ -1,0 +1,32 @@
+.activeLight {
+  background-color: var(--approval-background-color) !important;
+  color: var(--approval-text-color);
+}
+
+.pendingLight {
+  background-color: var(--pending-background-color) !important;
+  color: var(--pending-text-color);
+}
+
+.rejectLight {
+  background-color: var(--reject-background-color) !important;
+  color: var(--reject-text-color);
+}
+
+.status {
+  padding: 6px 18px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  width: fit-content;
+}
+
+.circle {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+}
