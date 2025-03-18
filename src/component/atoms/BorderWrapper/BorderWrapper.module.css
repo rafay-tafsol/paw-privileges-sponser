@@ -1,12 +1,6 @@
-.mainContainer {
-  min-height: 80vh;
+.wrapper {
   padding: 20px;
   border-radius: 20px;
-  border: 1px solid var(--primary);
-  background: rgba(249, 249, 249, 0.52);
-  margin-bottom: 20px;
-}
-
-.borderDark {
-  border: 1px solid var(--border-v1) !important;
+  border: 1px solid var(--light-gray);
+  background: var(--white-color);
 }

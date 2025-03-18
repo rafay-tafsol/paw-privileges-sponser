@@ -109,6 +109,7 @@ export const DropDown = ({
       alignItems: "center",
       border: "none",
       borderColor: "var(--main-color)",
+      borderRadius: "8px !important",
       textTransform: "capitialize",
       ...customStyle,
 
@@ -204,6 +205,7 @@ export const DropDown = ({
         .DropdownOptionContainer__menu {
           margin: 0px;
           border: 0px;
+          borderRadius: "8px !important",
           z-index: 1100 !important;
           box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
         }

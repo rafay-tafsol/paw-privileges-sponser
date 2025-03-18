@@ -1,0 +1,74 @@
+.PaymentCardMain {
+  border-radius: 8px;
+  border: 1px solid var(--light-gray-300);
+}
+
+.cardTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  border-bottom: 1px solid var(--light-gray-300);
+}
+
+.topLeft {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.topLeft span {
+  background-color: var(--dusty-rose);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.topLeft p {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--main-color);
+}
+
+.topRight {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.topRight span {
+  background-color: var(--Pale-Peach);
+  border: 0.546px solid #eee;
+  border-radius: 4px;
+  display: flex;
+  width: 27px;
+  height: 26px;
+  padding: 6.555px;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardBottom {
+  min-height: 150px;
+}
+
+.cardBottom span {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 10px 16px;
+}
+
+.cardBottom span h4 {
+  color: var(--main-color);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+}
+.cardBottom span p {
+  color: var(--main-color);
+  font-size: 18px;
+  font-weight: 500;
+}

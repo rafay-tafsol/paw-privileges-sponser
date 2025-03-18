@@ -31,6 +31,8 @@
   position: relative;
   background-color: var(--white);
   border-radius: 50px;
+  border-radius: 5px;
+  border: 1px solid var(--field_stroke_color);
 }
 
 .inputPassContainer input {
@@ -39,6 +41,9 @@
   border-radius: inherit;
   background-color: inherit;
   font-weight: 400;
+  border-radius: 5px;
+  border: 1px solid var(--field_stroke_color);
+  background: #fff;
 }
 
 /* .inputBox[color-variant="border"] {

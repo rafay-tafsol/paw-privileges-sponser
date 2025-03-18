@@ -61,3 +61,27 @@ export const billingTableHeader = [
   { key: "amount", title: "Amount", style: { width: "15%" } },
   { key: "select", title: "", style: { width: "10%" } },
 ];
+
+export const invoiceTableHeader = [
+  { key: "_id", title: "id", style: { width: "15%" } },
+  {
+    key: "subscriptionPlan",
+    title: "Subscription Plan",
+    style: { width: "15%" },
+  },
+  { key: "paymentDate", title: "Payment Date", style: { width: "15%" } },
+  { key: "paymentAmount", title: "Payment Amount", style: { width: "15%" } },
+  { key: "paymentMethod", title: "Payment Method", style: { width: "15%" } },
+  { key: "status", title: "Status", style: { width: "15%" } },
+  { key: "select", title: "", style: { width: "10%" } },
+];
+
+export const analyticsTableHeader = [
+  { key: "offerName", title: "Offer Name", style: { width: "30%" } },
+  { key: "reached", title: "Reached", style: { width: "10%" } },
+  { key: "clicks", title: "Clicks", style: { width: "7%" } },
+  { key: "responses", title: "Responses", style: { width: "10%" } },
+  { key: "status", title: "Status", style: { width: "13%" } },
+  { key: "chart", title: "Chart", style: { width: "10%" } },
+  { key: "select", title: "", style: { width: "20%" } },
+];

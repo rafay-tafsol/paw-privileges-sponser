@@ -7,3 +7,35 @@
   font-weight: 500;
   padding-block: 24px;
 }
+/* invoice */
+
+.statusSpan {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.paidSpan {
+  background-color: var(--royal-blue);
+}
+.pendingSpan {
+  background-color: var(--raspberry-pink-100);
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: fit-content;
+  padding: 5px 15px;
+  border-radius: 40px;
+  background-color: aquamarine;
+}
+.paidStatus {
+  background-color: var(--royal-blue-100);
+  color: var(--royal-blue);
+}
+.pendingStatus {
+  background-color: var(--raspberry-pink-200);
+  color: var(--raspberry-pink);
+}

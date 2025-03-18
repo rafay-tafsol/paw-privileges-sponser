@@ -2,6 +2,7 @@ import TableSkeleton from "@/component/atoms/TableSkeleton";
 import classes from "./AppTable.module.css";
 import { getNestedObject, mergeClass } from "@/resources/utils/helper";
 import { RECORDS_LIMIT } from "@/resources/utils/const";
+import NoDataFound from "@/component/atoms/NoDataFound/NoDataFound";
 // import { NoData } from "@/component/atoms/NoData/NoData";
 
 export default function AppTable({
@@ -88,7 +89,7 @@ export default function AppTable({
                 </tbody>
               </table>
             ) : (
-              <NoData text={noDataText} />
+              <NoDataFound text={noDataText} />
             )}
           </div>
         )}

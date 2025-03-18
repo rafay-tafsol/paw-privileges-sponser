@@ -6,7 +6,7 @@ const ShowStatus = ({ status }) => {
   return (
     <div
       className={` ${classes.status} ${
-        status === "pending"
+        status === "pending" || status === "Pending"
           ? classes.pendingLight
           : status === "rejected"
           ? classes?.rejectLight

@@ -1,0 +1,98 @@
+.header {
+  padding-bottom: 24px;
+}
+
+.paymentDetails {
+  border-radius: 20px;
+  border: 1px solid #dbdbdb;
+  background: #fff;
+  margin-top: 24px;
+}
+.paymentDetailHead {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border-bottom: 1px solid #eaecf0;
+  padding: 16px;
+}
+.paymentDetailHead span {
+  background-color: var(--dusty-rose);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.paymentDetailHead p {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--main-color);
+}
+.subHead {
+  border-bottom: 1px solid #eaecf0;
+  padding: 16px;
+}
+
+.subHead h4 {
+  color: var(--main-color);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+}
+.billingAddress {
+  padding: 16px;
+  padding-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.billingAddress h4 {
+  color: var(--main-color);
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.billingAddress p span {
+  color: var(--main-color);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 26px;
+  margin-left: 10px;
+}
+.paymentDetail {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.paymentDetail span {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.payment span h4,
+.paymentDetail span h4 {
+  color: var(--main-color);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 20px;
+}
+.payment span p,
+.paymentDetail span p {
+  color: var(--main-color);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.payment span {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+}

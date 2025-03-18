@@ -6,3 +6,6 @@
 .heading {
   text-transform: capitalize;
 }
+.header button svg {
+  margin-left: 10px !important;
+}

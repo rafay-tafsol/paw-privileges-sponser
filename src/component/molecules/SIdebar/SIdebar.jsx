@@ -1,12 +1,23 @@
-import React from "react";
-import classes from "./SIdebar.module.css";
-import { mergeClass } from "@/resources/utils/helper";
+"use client";
+
 import Button from "@/component/atoms/Button";
-import { IoPowerSharp } from "react-icons/io5";
 import SidebarItem from "@/component/atoms/SidebarItem";
 import { sidebarData } from "@/developmentContent/developmentData/SidebarData";
+import { mergeClass } from "@/resources/utils/helper";
+import { useRouter } from "next/navigation";
+import { useDispatch } from "react-redux";
+import classes from "./SIdebar.module.css";
+import { signOutRequest } from "@/store/auth/authSlice";
 
 const Sidebar = () => {
+  // const onLogout = () => {
+  //   dispatch(signOutRequest());
+  //   Cookies.remove("_xpdx");
+  //   Cookies.remove("_xpdx_u");
+  //   router.replace("/");
+  //   RenderToast("Logged out successfully", "success");
+  // };
+
   return (
     <div className={mergeClass("width height", classes.Sidebar)}>
       <div className={classes.sidebarContent}>
@@ -15,7 +26,7 @@ const Sidebar = () => {
         })}
       </div>
       <div className={classes.btnMain}>
-        <Button label={"Logout"} />
+        <Button variant={"primary"} label={"Logout"} />
       </div>
     </div>
   );

@@ -1,3 +1,5 @@
+"use client";
+
 import { mergeClass } from "@/resources/utils/helper";
 import classes from "./Checkbox.module.css";
 import PropTypes from "prop-types";

@@ -1,10 +1,5 @@
-
+import AuthContainer from "@/component/atoms/AuthContainer/AuthContainer";
 
 export default function AuthLayout({ children }) {
-  return (
-    <div>
-      <div>auth</div>
-      {children}
-    </div>
-  );
+  return <AuthContainer>{children}</AuthContainer>;
 }

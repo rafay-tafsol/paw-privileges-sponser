@@ -12,6 +12,8 @@ const TopHeader = ({
   showSearch = false,
   showDropdownFilter = false,
   showDateFilter = false,
+  options,
+  placeholder,
 }) => {
   return (
     <div
@@ -38,7 +40,11 @@ const TopHeader = ({
       )}
       {showDropdownFilter && (
         <div className={classes.dropdown}>
-          <DropDown containerCustom={classes.dropdownCustom} />
+          <DropDown
+            options={options}
+            containerCustom={classes.dropdownCustom}
+            placeholder={placeholder}
+          />
         </div>
       )}
     </div>

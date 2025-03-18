@@ -7,7 +7,7 @@ import combineReducer from "./combineReducer";
 const persistConfig = {
   key: "root",
   storage,
-  whitelist: ["authReducer", "commonReducer", "cartReducer"],
+  whitelist: ["authReducer", "commonReducer"],
   // blacklist: ["commonReducer"],
 };
 

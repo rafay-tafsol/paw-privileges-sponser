@@ -18,6 +18,7 @@ import { HiDotsHorizontal } from "react-icons/hi";
 import ShowStatus from "@/component/atoms/ShowStatus";
 import Pagination from "@/component/molecules/PaginationComponent";
 import { useRouter } from "next/navigation";
+import { offerStatus } from "@/developmentContent/developmentData/DropdownData/DropdownData";
 
 const OfferManagementTemplate = () => {
   const router = useRouter();
@@ -34,9 +35,11 @@ const OfferManagementTemplate = () => {
       <div className="width">
         <TopHeader
           className={"mt20"}
+          placeholder={"Status"}
           showSearch
           showDropdownFilter
           showDateFilter
+          options={offerStatus}
         />
       </div>
       <div className="mt12">

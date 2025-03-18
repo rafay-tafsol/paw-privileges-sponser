@@ -32,7 +32,7 @@
 }
 .tableHeaderContainer th {
   color: var(--doveGray);
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 
 .tableBodyContainer {

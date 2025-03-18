@@ -1,0 +1,14 @@
+.inputClass {
+  /* background-color: transparent !important; */
+  border: none;
+}
+
+.resendText {
+  color: var(--main-color);
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin-top: 20px;
+}
