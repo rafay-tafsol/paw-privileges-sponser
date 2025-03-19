@@ -40,7 +40,11 @@ const SubscriptionPage = () => {
               <Row>
                 {subscriptionCardData?.map((data, index) => (
                   <Col md={6} key={index}>
-                    <SubscriptionCard data={data} />
+                    <SubscriptionCard
+                      data={data}
+                      isPrimaryBtn={true}
+                      label={"Upgrade"}
+                    />
                   </Col>
                 ))}
               </Row>

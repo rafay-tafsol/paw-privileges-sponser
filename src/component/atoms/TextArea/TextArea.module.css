@@ -20,11 +20,12 @@
   -ms-overflow-style: none;
   scrollbar-width: none;
   width: 100%;
-  background-color: var(--white);
+  background-color: var(--white-color);
   outline: 0px;
-  border: 1px solid var(--border);
-  border: 0px;
-  border-radius: 10px;
+  border: 1px solid var(--field_stroke_color);
+  /* border: 0px; */
+  padding: 5px;
+  border-radius: 5px;
 }
 
 .textAreaBox textarea::placeholder {
