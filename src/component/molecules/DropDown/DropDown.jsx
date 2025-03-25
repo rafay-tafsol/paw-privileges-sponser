@@ -46,6 +46,8 @@ export const DropDown = ({
   isMulti,
   style,
   leftIcon,
+  error, // Show Error Boolean
+  errorText, // Error Text
   Components,
   labelClassName,
   indicatorColor = "var(--field_stroke_color)",
@@ -271,6 +273,9 @@ export const DropDown = ({
         />
         {leftIcon && <div className={classes.leftIconBox}>{leftIcon}</div>}
       </div>
+      {errorText && (
+        <p className={`mt-2 ${[classes.errorText].join(" ")}`}>{errorText}</p>
+      )}
     </div>
   );
 };

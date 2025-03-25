@@ -97,7 +97,7 @@ const AnalyticsTemplate = () => {
       </div>
       <BorderWrapper className={classes.BorderWrapper}>
         <ContentHeader
-          title={"Offer Management"}
+          title={"Offer Analytics"}
           buttonText={"Download Report"}
           variant={"secondary"}
           rightIcon={<PiDownloadBold />}

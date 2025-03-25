@@ -1,6 +1,7 @@
 .subscriptionCardMain {
   border-radius: 8px;
   border: 1px solid var(--light-gray-300);
+  background-color: var(--white-color);
 }
 
 .cardTop {

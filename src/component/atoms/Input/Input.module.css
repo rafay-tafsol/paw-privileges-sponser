@@ -5,20 +5,37 @@
 }
 
 .labelText {
-  color: var(--black-v7);
-  font-family: var(--inter);
+  color: var(--Mine-Shaft-800);
   font-size: 16px;
-  font-weight: 400;
-  line-height: 20px; /* 142.857% */
+  font-weight: 500;
+  line-height: 20px;
   letter-spacing: -0.14px;
   margin-bottom: 10px;
 }
 
 .inputBox {
   height: 100%;
-  padding: 15px 10px;
+  padding: 8px 10px;
   width: 100%;
-  border: 1px solid var(--border);
+  border: 1px solid var(--field_stroke_color);
+}
+
+.labelWithBtn {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  padding-bottom: 10px;
+}
+
+.labelWithBtn button {
+  width: fit-content;
+  background-color: transparent;
+  border: 1px solid var(--main-color) !important;
+  padding: 12px 25px !important;
+}
+.labelWithBtn button svg {
+  margin-right: 5px;
+  font-size: 20px;
 }
 
 .noBorder {
@@ -60,8 +77,8 @@
 
 .inputPassContainer input::placeholder {
   /* color: #ccc; */
-  color: var(--placeholder) !important;
-  padding-left: 10px;
+  color: var(--Mine-Shaft-500) !important;
+  /* padding-left: 10px; */
   font-size: 16px;
   text-transform: capitalize;
   font-family: var(--inter);
@@ -98,6 +115,11 @@
   bottom: 45%;
   transform: translateY(-50%);
   height: max-content;
+}
+
+.errorText {
+  color: red;
+  font-size: 15px;
 }
 
 .inputBox ::-webkit-outer-spin-button,

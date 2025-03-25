@@ -1,0 +1,66 @@
+.socialSelectHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.socialSelectHead input {
+  width: 100%;
+}
+.errorText {
+  color: red;
+  font-size: 15px;
+}
+
+.socialSelectHead button {
+  width: fit-content;
+  background-color: transparent;
+  border: 1px solid var(--main-color) !important;
+  padding: 12px 25px !important;
+  border-radius: 8px;
+}
+
+.socialSelectHead button svg {
+  margin-right: 5px;
+  font-size: 20px;
+  fill: var(--main-color);
+  margin-bottom: 5px;
+}
+
+.socialSelectHead button label {
+  color: var(--main-color);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.socialSelectBody input {
+  width: 100%;
+  outline: 0;
+}
+
+.socialLinkList {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  row-gap: 10px;
+}
+
+.linkTag {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-top: 20px;
+}
+
+.removeBtn {
+  border-color: red;
+  color: red;
+  height: 18px;
+  width: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}

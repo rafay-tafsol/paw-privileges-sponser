@@ -2,6 +2,7 @@
   user-select: none;
   height: 120px;
   width: 220px;
+  margin-top: 20px;
   /* width: 120px; */
   /* margin: auto; */
   margin-inline: 0 auto;
@@ -176,7 +177,7 @@
   text-transform: capitalize;
   font-size: 16px;
   font-weight: 500;
-  margin-bottom: 10px;
+  /* margin-bottom: 10px; */
 }
 .iosAdd {
   font-size: 48px !important;

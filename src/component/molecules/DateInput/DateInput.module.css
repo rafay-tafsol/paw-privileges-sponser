@@ -43,8 +43,7 @@
   opacity: 1 !important;
 }
 
-.input input:focus {
-}
-
-.labelText {
+.errorText {
+  color: red;
+  font-size: 15px;
 }

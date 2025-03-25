@@ -2,7 +2,7 @@
 import LottieLoader from "@/component/atoms/LottieLoader/LottieLoader";
 import RenderToast from "@/component/atoms/RenderToast";
 import { Patch } from "@/interceptor/axios-functions";
-import { mediaUrl, mergeClass } from "@/resources/utils/helper";
+import { mediaUrl } from "@/resources/utils/helper";
 import {
   getMediaType,
   getSupportedImageTypes,
@@ -14,9 +14,8 @@ import { BsFillPlusSquareFill } from "react-icons/bs";
 import { FaFileContract } from "react-icons/fa";
 import { IoCloseOutline } from "react-icons/io5";
 import classes from "./MultiFileUpload.module.css";
-import { CiCircleAlert } from "react-icons/ci";
 
-export default function MultiFileUpload({
+const MultiFileUpload = ({
   label,
   uploadText = "Upload File",
   customTextClass,
@@ -31,8 +30,7 @@ export default function MultiFileUpload({
   acceptedFiles = getSupportedImageTypes("all"),
   removeFileCb,
   maxFileCount = 5,
-  text,
-}) {
+}) => {
   const [isDeleteApiCalling, setIsDeleteApiCalling] = useState(false);
   let containerStyleObject = {
     ...(errorText && { border: "1px solid red" }),
@@ -133,18 +131,8 @@ export default function MultiFileUpload({
   });
 
   return (
-    <div>
-      <div className={classes.mainIcon}>
-        {label && (
-          <p className={mergeClass("h3 mb0", classes.labelStyle)}>{label}</p>
-        )}
-        {text && (
-          <div className={classes.flexGapCustom}>
-            <CiCircleAlert size={18} color="var(--Mine-Shaft-500)" />
-            <div className={classes.description}>{text}</div>
-          </div>
-        )}
-      </div>
+    <>
+      {label && <p className={`fs-13 mt-3 ${classes.labelStyle}`}>{label}</p>}
       <div
         className={classes.fileInputDiv}
         style={{
@@ -167,6 +155,7 @@ export default function MultiFileUpload({
               </div>
             )}
             <p className={`${customTextClass} ${classes.text}`}>{uploadText}</p>
+            <BsFillPlusSquareFill color="var(--primary-bg)" size={20} />
             {fileSize ||
               (supportedFiles && (
                 <div>
@@ -174,11 +163,13 @@ export default function MultiFileUpload({
                   <p className={classes.desc}>{supportedFiles}</p>
                 </div>
               ))}
-            <BsFillPlusSquareFill color="var(--main-color)" size={20} />
           </div>
         </div>
       </div>
-
+      {errorText && (
+        <p className={`mt-2 ${[classes.errorText].join(" ")}`}>{errorText}</p>
+      )}
+      {/* {errorText && <p className={`${classes.error}`}>{errorText}</p>} */}
       {files && (
         <div className={classes.filePreviewList}>
           {files?.map((file, index) => (
@@ -194,9 +185,10 @@ export default function MultiFileUpload({
           ))}
         </div>
       )}
-      {errorText && <p className={`${classes.error}`}>{errorText}</p>}
 
       {isDeleteApiCalling && <LottieLoader />}
-    </div>
+    </>
   );
-}
+};
+
+export default MultiFileUpload;

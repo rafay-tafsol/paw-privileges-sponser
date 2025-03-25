@@ -1,0 +1,23 @@
+.image {
+  width: 100%;
+  margin: 0px !important;
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+}
+.image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.invi_box {
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  margin: auto;
+  height: 170px;
+  max-width: 85%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}

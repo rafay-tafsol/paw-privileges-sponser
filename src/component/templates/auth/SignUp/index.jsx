@@ -1,22 +1,24 @@
 "use client";
-
+import { useState } from "react";
 import Button from "@/component/atoms/Button";
 import Input from "@/component/atoms/Input/Input";
-import TextComponent from "@/component/atoms/TextComponent/TextComponent";
-import { mergeClass } from "@/resources/utils/helper";
-import React, { useState } from "react";
-import classes from "./signIn.module.css";
-import { useRouter } from "next/navigation";
-import UploadImage from "@/component/atoms/UploadImage";
 import { TextArea } from "@/component/atoms/TextArea/TextArea";
 import MultiFileUpload from "@/component/molecules/MultiFileUpload/MultiFileUpload";
+import SocialMediaSelect from "@/component/molecules/SocialMediaSelect";
+import UploadImageBox from "@/component/molecules/UploadImageBox";
+import { useRouter } from "next/navigation";
+import { FiPlus } from "react-icons/fi";
+import classes from "./signUp.module.css";
 import { SlCloudUpload } from "react-icons/sl";
 import { getSupportedImageTypes } from "@/resources/utils/mediaUpload";
-import UploadImageBox from "@/component/molecules/UploadImageBox";
+import { signUpSchema } from "@/formik/schema/SignUpSchema";
+import { useFormik } from "formik";
 
 const SignUpTemplate = () => {
   const router = useRouter();
   const [documentFiles, setDocumentFiles] = useState([]);
+  const [inputValue, setInputValue] = useState("");
+  const [socialLinks, setSocialLinks] = useState([]);
 
   const [formData, setFormData] = useState({
     image: null,
@@ -26,14 +28,56 @@ const SignUpTemplate = () => {
     setFormData((prev) => ({ ...prev, [key]: value }));
   };
 
+  const SignUpFormik = useFormik({
+    initialValues: {
+      name: "",
+      email: "",
+      location: "",
+      contact: "",
+      password: "",
+      date: "",
+      description: "",
+      // logo: null,
+      gallery: [],
+      socialLinks: [],
+    },
+    validationSchema: signUpSchema,
+
+    onSubmit: (values) => {
+      console.log("Formik Errors:", SignUpFormik.errors); // Check if validation is blocking submission
+      console.log("Form Submitted", values);
+    },
+  });
+
+  const handleAdd = () => {
+    console.log("Input Value:", inputValue);
+    console.log("Current Social Links:", SignUpFormik.values.socialLinks);
+
+    if (
+      inputValue.trim() &&
+      !SignUpFormik.values.socialLinks.includes(inputValue)
+    ) {
+      const updatedLinks = [
+        ...SignUpFormik.values.socialLinks,
+        inputValue.trim(),
+      ];
+      console.log("Updated Social Links:", updatedLinks);
+
+      SignUpFormik.setFieldValue("socialLinks", updatedLinks);
+      setInputValue(""); // Clear input
+    }
+  };
+
+  const handleRemove = (platform) => {
+    const updatedLinks = SignUpFormik.values.socialLinks.filter(
+      (item) => item !== platform
+    );
+    SignUpFormik.setFieldValue("socialLinks", updatedLinks);
+  };
+
   return (
     <>
-      <TextComponent
-        title={"Sign Up"}
-        description={"Welcome To Paw Privileges"}
-      />
-      {/* <UploadImage title={"Update Profile"} /> */}
-      <UploadImageBox
+      {/* <UploadImageBox
         containerClass={classes.uploadImageContainerClass}
         hideDeleteIcon={true}
         state={formData?.image}
@@ -47,47 +91,122 @@ const SignUpTemplate = () => {
         onEdit={() => {}}
         imgClass={classes.uploadImage}
         label={"Add Image"}
-      />
-      <div>
-        <div className={"flexColGap"}>
-          <Input placeholder={"Wade Warren"} label={"Name"} />
-          <Input placeholder={"Email"} type={"email"} label={"Email"} />
-          <Input placeholder={"Monaco"} label={"Location"} />
-          <Input placeholder={"(308) 555-0121"} label={"Contact"} />
-          <Input
-            placeholder={"password"}
-            type={"password"}
-            label={"Password"}
-          />
-          <Input placeholder={"10-10-25"} type={"date"} label={"Date"} />
-          <TextArea placeholder={"Type Description"} label={"Description"} />
-          <MultiFileUpload
-            extraStyles={{ marginBottom: "10px" }}
-            label="Upload Gallery"
-            text={"Please upload an image with dimensions of 120x170"}
-            uploadText="Browse and chose the files you want to upload from your computer"
-            supportedFiles="(Image Dimensions 1200x170)"
-            uploadIcon={
-              <SlCloudUpload size={24} color="var(--Mine-Shaft-500)" />
-            }
-            setFiles={(files) => handleUploadMedia(files)}
-            acceptedFiles={getSupportedImageTypes("images")}
-            files={documentFiles}
-            removeFileCb={(key) => {
-              const newDocuments = documentFiles.filter((e) => e !== key);
-              setDocumentFiles(newDocuments);
-              // formik.setFieldValue("proposal", newDocuments);
-            }}
-            //   errorText={formik.touched.proposal && formik.errors.proposal}
-            maxFileCount={1}
-            //   formik={formik}
-          />
-          <Input placeholder={"Account url"} label={"Share Social Link*"} />
-          <Button variant={"primary"} label={"Sign In"} />
-          <p className={mergeClass(`h4 center`, classes.bottom)}>
-            Already Have An Account? <span> Sign In</span>
-          </p>
-        </div>
+      /> */}
+
+      <div className="flexColGap">
+        <Input
+          name="name"
+          placeholder="Wade Warren"
+          label="Name"
+          value={SignUpFormik.values.name}
+          setValue={SignUpFormik.handleChange("name")}
+          errorText={SignUpFormik.touched.name && SignUpFormik.errors.name}
+        />
+        <Input
+          name="email"
+          placeholder="Email"
+          type="email"
+          label="Email"
+          value={SignUpFormik.values.email}
+          setValue={SignUpFormik.handleChange("email")}
+          errorText={SignUpFormik.touched.email && SignUpFormik.errors.email}
+        />
+        <Input
+          name="location"
+          placeholder="Monaco"
+          label="Location"
+          value={SignUpFormik.values.location}
+          setValue={SignUpFormik.handleChange("location")}
+          errorText={
+            SignUpFormik.touched.location && SignUpFormik.errors.location
+          }
+        />
+        <Input
+          name="contact"
+          placeholder="(308) 555-0121"
+          label="Contact"
+          value={SignUpFormik.values.contact}
+          setValue={SignUpFormik.handleChange("contact")}
+          errorText={
+            SignUpFormik.touched.contact && SignUpFormik.errors.contact
+          }
+        />
+        <Input
+          name="password"
+          placeholder="password"
+          type="password"
+          label="Password"
+          value={SignUpFormik.values.password}
+          setValue={SignUpFormik.handleChange("password")}
+          errorText={
+            SignUpFormik.touched.password && SignUpFormik.errors.password
+          }
+        />
+        <Input
+          name="date"
+          placeholder="10-10-25"
+          type="date"
+          label="Date"
+          value={SignUpFormik.values.date}
+          setValue={SignUpFormik.handleChange("date")}
+          errorText={SignUpFormik.touched.date && SignUpFormik.errors.date}
+        />
+        <TextArea
+          name="description"
+          placeholder="Type Description"
+          label="Description"
+          value={SignUpFormik.values.description}
+          setter={SignUpFormik.handleChange("description")}
+          errorText={
+            SignUpFormik.touched.description && SignUpFormik.errors.description
+          }
+        />
+        <MultiFileUpload
+          extraStyles={{ marginBottom: "10px" }}
+          label="Upload Gallery"
+          text="Please upload an image with dimensions of 120x170"
+          uploadText="Browse and choose the files you want to upload from your computer"
+          supportedFiles="(Image Dimensions 1200x170)"
+          uploadIcon={<SlCloudUpload size={24} color="var(--Mine-Shaft-500)" />}
+          setFiles={(files) => {
+            setDocumentFiles(files);
+            SignUpFormik.setFieldValue("gallery", files);
+          }}
+          acceptedFiles={getSupportedImageTypes("images")}
+          files={documentFiles}
+          removeFileCb={(key) => {
+            const newDocuments = documentFiles.filter((e) => e !== key);
+            setDocumentFiles(newDocuments);
+            SignUpFormik.setFieldValue("gallery", newDocuments);
+          }}
+          maxFileCount={5}
+          errorText={
+            SignUpFormik.touched.gallery && SignUpFormik.errors.gallery
+          }
+        />
+
+        <SocialMediaSelect
+          inputLabel="Share Social Link*"
+          inputPlaceholder="Enter social media name"
+          RightBtn={true}
+          btnLabel="Add Link"
+          btnLeftIcon={<FiPlus />}
+          inputValue={inputValue}
+          setInputValue={setInputValue}
+          socialLinks={SignUpFormik.values.socialLinks} // Make sure it's coming from Formik
+          handleAdd={handleAdd}
+          handleRemove={handleRemove}
+        />
+
+        <Button
+          variant="primary"
+          label="Sign Up"
+          type="submit"
+          onClick={SignUpFormik.handleSubmit}
+        />
+        <p className={classes.bottom}>
+          Already Have An Account? <span>Sign In</span>
+        </p>
       </div>
     </>
   );

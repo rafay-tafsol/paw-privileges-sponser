@@ -16,6 +16,7 @@ const ChangeLanguage = () => {
       <BorderWrapper>
         <div className={classes.head}>
           <ContentHeader title={"Change Language"} />
+          <p>Select Your Preferred Language</p>
         </div>
         <div className={classes.inputField}>
           <Checkbox label={"English"} value={checked} setValue={setChecked} />

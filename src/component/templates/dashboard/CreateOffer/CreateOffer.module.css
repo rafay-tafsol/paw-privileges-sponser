@@ -33,6 +33,7 @@
 .twoInputs {
   display: flex;
   width: 100%;
+  max-width: 35%;
   gap: 20px;
 }
 
@@ -40,9 +41,17 @@
   width: 50% !important;
 }
 
+/* .customInput input {
+  min-height: 30px !important;
+} */
+
 .customLabel {
   display: flex;
   flex-direction: column;
+}
+
+.twoInputs > div > div {
+  height: 50px;
 }
 
 .labelText {

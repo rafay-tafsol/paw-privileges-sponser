@@ -12,6 +12,8 @@ export default function DateInput({
   value,
   setValue,
   label,
+  error, // Show Error Boolean
+  errorText, // Error Text
   placeholder = "Select Date",
   inputClass = "",
   minDate = null,
@@ -72,6 +74,9 @@ export default function DateInput({
           {...props}
         />
       </LocalizationProvider>
+      {errorText && (
+        <p className={`mt-2 ${[classes.errorText].join(" ")}`}>{errorText}</p>
+      )}
     </div>
   );
 }

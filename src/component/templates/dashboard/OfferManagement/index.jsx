@@ -58,7 +58,14 @@ const OfferManagementTemplate = () => {
               <HiDotsHorizontal
                 fontSize={24}
                 cursor={"pointer"}
-                onClick={() => router.push(`/offer-management/offer-details`)}
+                // onClick={() => router.push(`/offer-management/offer-details?`)}
+                onClick={() =>
+                  router.push(
+                    `/offer-management/offer-details?type=${
+                      value === "online" ? "online" : "in-person"
+                    }`
+                  )
+                }
               />
             );
           }

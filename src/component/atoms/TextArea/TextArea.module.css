@@ -24,13 +24,15 @@
   outline: 0px;
   border: 1px solid var(--field_stroke_color);
   /* border: 0px; */
-  padding: 5px;
+  /* padding: 5px; */
+  padding: 15px 10px;
   border-radius: 5px;
 }
 
 .textAreaBox textarea::placeholder {
-  color: var(--placeholder) !important;
-  padding-left: 10px;
+  /* color: var(--placeholder) !important; */
+  color: var(--Mine-Shaft-500) !important;
+  /* padding-left: 5px; */
 }
 
 .labelDisabled {

@@ -26,14 +26,15 @@ const SignInTemplate = () => {
             label={"Password"}
           />
           <p
-            className={mergeClass(`h4 right`)}
+            className={mergeClass(`h4 right cursor`)}
             onClick={() => router.push("/auth/forget-password")}
           >
             Forget Password?
           </p>
           <Button variant={"primary"} label={"Sign In"} />
-          <p className={mergeClass(`h4 center`, classes.bottom)}>
-            Don’t Have An Account? <span> Sign Up</span>
+          <p className={mergeClass(`h4 center cursor`, classes.bottom)}>
+            Don’t Have An Account?{" "}
+            <span onClick={() => router.push("/auth/sign-up")}> Sign Up</span>
           </p>
         </div>
       </div>

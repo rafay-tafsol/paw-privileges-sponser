@@ -10,3 +10,10 @@
   justify-content: end;
   gap: 20px;
 }
+
+.head p {
+  color: var(--Mine-Shaft-800);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: normal;
+}

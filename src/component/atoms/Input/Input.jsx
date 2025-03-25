@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 import classes from "./Input.module.css";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
+import Button from "../Button";
 
 /**
  * Primary UI component for user interaction
@@ -33,6 +34,9 @@ const Input = ({
   className,
   inputContainerClass = "",
   variant = "",
+  RightBtn,
+  btnLeftIcon,
+  btnLabel,
   ...props
 }) => {
   const [passToggle, setPassToggle] = useState(false);
@@ -55,6 +59,7 @@ const Input = ({
             {label} {label2 && label2}
           </label>
         )}
+
         <div
           className={`${[classes.inputPassContainer, inputContainerClass].join(
             " "
@@ -97,8 +102,7 @@ const Input = ({
             }}
           />
 
-        {rightIcon && <div className={classes.rightIconBox}>{rightIcon}</div>}
-
+          {rightIcon && <div className={classes.rightIconBox}>{rightIcon}</div>}
 
           {type == "password" && passToggle == false && (
             <VisibilityOffIcon

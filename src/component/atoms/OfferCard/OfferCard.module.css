@@ -1,0 +1,40 @@
+.mainDiv {
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  background-color: var(--card-bg-color);
+  padding: 10px;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.imageDiv {
+  position: relative;
+  height: 280px;
+  width: 100%;
+}
+
+.image {
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+.dateBadge {
+  position: absolute;
+  top: 15px;
+  right: 10px;
+  background-color: var(--main-color);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+.dateBadge span {
+  font-weight: 600;
+}
+
+.location {
+  display: flex;
+  gap: 5px;
+}

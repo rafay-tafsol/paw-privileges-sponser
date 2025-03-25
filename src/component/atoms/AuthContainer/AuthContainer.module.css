@@ -12,7 +12,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("/images/app-images/svg/bg.svg");
+  /* background-image: url("/images/app-images/svg/bg.svg"); */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -26,6 +26,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 45px;
 }
 
 .child {
@@ -47,7 +48,7 @@
 
 .child::-webkit-scrollbar {
   width: 5px;
-  display: none;
+  /* display: none; */
 }
 
 /* Track */
