@@ -9,3 +9,7 @@
 .bottom span {
   color: var(--Carnation-Pink);
 }
+.forgot {
+  margin-inline: auto 0;
+  width: fit-content;
+}

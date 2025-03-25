@@ -9,16 +9,28 @@
   content: "";
   position: absolute;
   top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  /* background-image: url("/images/app-images/svg/bg.svg"); */
-  background-size: cover;
+  right: 0;
+  width: 21%;
+  height: 60%;
+  background-image: url("/images/app-images/png/authAfter.png");
+  background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
   z-index: -1;
 }
-
+.authParent::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 29%;
+  height: 43%;
+  background-image: url("/images/app-images/png/authbefore.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
 .mainChildren {
   height: 100vh;
   width: 100%;

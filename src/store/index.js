@@ -7,7 +7,7 @@ import combineReducer from "./combineReducer";
 const persistConfig = {
   key: "root",
   storage,
-  whitelist: ["authReducer", "commonReducer"],
+  whitelist: ["authReducer", "commonReducer"], //cartReducer
   // blacklist: ["commonReducer"],
 };
 
@@ -15,6 +15,10 @@ const persistedReducer = persistReducer(persistConfig, combineReducer);
 
 const store = configureStore({
   reducer: persistedReducer,
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware({
+      serializableCheck: false,
+    }),
 });
 
 export const persistor = persistStore(store);

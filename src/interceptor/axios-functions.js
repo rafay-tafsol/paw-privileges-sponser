@@ -1,11 +1,11 @@
 "use client";
 import axios from "axios";
 import Cookies from "js-cookie";
-import { mediaUrl } from "./apiUrl";
 import {
   baseURL,
   handleDecrypt,
   handleEncrypt,
+  mediaUrl,
 } from "@/resources/utils/helper";
 import { signOutRequest } from "@/store/auth/authSlice";
 import RenderToast from "@/component/atoms/RenderToast";
@@ -56,16 +56,8 @@ let handleRequest = async ({
 
     const _headers = {
       Accept: "application/json",
-      "Content-Type": "application/json",
-
-      ...(isFormData && {
-        "Content-Type": "multipart/form-data",
-      }),
-
-      ...(token && {
-        Authorization: `Bearer ${handleDecrypt(token)}`,
-      }),
-
+      "Content-Type": isFormData ? "multipart/form-data" : "application/json",
+      ...(token && { Authorization: `Bearer ${handleDecrypt(token)}` }),
       ...headers,
     };
 
@@ -76,7 +68,7 @@ let handleRequest = async ({
       headers: _headers,
     });
 
-    return { response, error: null };
+    return response;
   } catch (error) {
     const errorMessage = getErrorMsg(error);
     console.log("🚀 ~ errorMessage:", errorMessage);
@@ -88,21 +80,23 @@ let handleRequest = async ({
         position: "top-center",
       });
     }
+    // ! TODO
+    // if (error?.response?.status === 401) {
+    //   try {
+    //     const newAccessToken = await refreshAccessToken();
+    //     headers.Authorization = `Bearer ${newAccessToken}`;
+    //     return await axios({ method, url, data, headers });
+    //   } catch (refreshError) {
+    //     dispatch && dispatch(signOutRequest());
+    //     Cookies.remove("_xpdx");
+    //     Cookies.remove("_xpdx_rf");
+    //     if (typeof window !== "undefined") {
+    //       window.location.href = "/login";
+    //     }
+    //   }
+    // }
 
-    if (error?.response?.status === 401) {
-      try {
-        const newAccessToken = await refreshAccessToken(); // Attempt to refresh token
-        headers.Authorization = `Bearer ${newAccessToken}`; // Update headers with new token
-        return await axios({ method, url, data, headers }); // Retry the request
-      } catch (refreshError) {
-        dispatch(signOutRequest());
-        Cookies.remove("_xpdx");
-        Cookies.remove("_xpdx_rf");
-        typeof window !== "undefined" && window.location === "/login";
-      }
-    }
-
-    return { error, response: null };
+    return null;
   }
 };
 

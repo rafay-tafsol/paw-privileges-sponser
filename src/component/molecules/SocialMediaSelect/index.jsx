@@ -1,6 +1,10 @@
 import Button from "@/component/atoms/Button";
 import classes from "./SocialMediaSelect.module.css";
 import { RxCross2 } from "react-icons/rx";
+import { MdAdd } from "react-icons/md";
+import Input from "@/component/atoms/Input/Input";
+import { RiAttachment2 } from "react-icons/ri";
+import { mergeClass } from "@/resources/utils/helper";
 
 const SocialMediaSelect = ({
   inputLabel,
@@ -15,6 +19,7 @@ const SocialMediaSelect = ({
   setInputValue,
   socialLinks,
   handleAdd,
+  labelBtnText,
   handleRemove,
 }) => {
   return (
@@ -27,22 +32,27 @@ const SocialMediaSelect = ({
         {RightBtn && (
           <Button
             label={btnLabel}
-            variant={"outline"}
+            variant={"outlined"}
             onClick={handleAdd}
-            leftIcon={btnLeftIcon}
+            className={classes.btnLabel}
+            leftIcon={<MdAdd size={24} />}
           />
         )}
       </div>
 
       {/* Input Field */}
       <div className={classes.socialSelectBody}>
-        <input
-          type="text"
-          className="border p-2 rounded w-64"
-          placeholder={inputPlaceholder}
-          value={inputValue}
-          onChange={(e) => setInputValue(e.target.value)}
-        />
+        <div
+          className={mergeClass("border p-2 rounded w-64", classes.socialInput)}
+        >
+          <RiAttachment2 color={"var(--Mine-Shaft-500)"} />
+          <input
+            type="text"
+            placeholder={inputPlaceholder}
+            value={inputValue}
+            onChange={(e) => setInputValue(e.target.value)}
+          />
+        </div>
       </div>
       {errorText && (
         <p className={`mt-2 ${[classes.errorText].join(" ")}`}>{errorText}</p>

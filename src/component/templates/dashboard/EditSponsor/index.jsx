@@ -140,7 +140,16 @@ const EditSponsor = () => {
                 accountFormik.touched.contact && accountFormik.errors.contact
               }
             />
-            <Input
+            <DateInput
+              label={"Date"}
+              name="date"
+              placeholder="10-10-25"
+              type="date"
+              value={SignUpFormik.values.date}
+              setValue={SignUpFormik.handleChange("date")}
+              errorText={SignUpFormik.touched.date && SignUpFormik.errors.date}
+            />
+            {/* <Input
               name="date"
               placeholder="10-10-25"
               type="date"
@@ -150,7 +159,7 @@ const EditSponsor = () => {
               errorText={
                 accountFormik.touched.date && accountFormik.errors.date
               }
-            />
+            /> */}
             <TextArea
               name="description"
               placeholder="Type Description"

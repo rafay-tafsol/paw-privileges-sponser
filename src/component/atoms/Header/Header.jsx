@@ -1,67 +1,3 @@
-// "use client";
-
-// import { mergeClass } from "@/resources/utils/helper";
-// import Image from "next/image";
-// import { useRouter } from "next/navigation";
-// import { FaAngleDown } from "react-icons/fa6";
-// import { IoMdNotificationsOutline } from "react-icons/io";
-// import classes from "./Header.module.css";
-// import { ClickAwayListener } from "@mui/material";
-// import { useState } from "react";
-
-// const Header = () => {
-//   const router = useRouter();
-//   const [loading, setLoading] = useState("");
-
-//   return (
-//     <div className={classes.Header}>
-//       <div className="flexBetween">
-//         <div className={classes.logo}>
-//           <Image src={"/images/app-images/svg/logo.svg"} alt="logo" fill />
-//         </div>
-//         <div className={mergeClass(classes.rightHeader)}>
-//           <IoMdNotificationsOutline
-//             cursor={"pointer"}
-//             fontSize={26}
-//             onClick={() => router.push("/notification")}
-//           />
-//           <div className={mergeClass("flexGap", classes.profileImage)}>
-//             <div className={classes.profile}>
-//               <Image
-//                 src={"/images/app-images/svg/profile.svg"}
-//                 fill
-//                 alt="profile"
-//               />
-//             </div>
-//             <FaAngleDown />
-//           </div>
-//           <ClickAwayListener onClickAway={() => setLoading("")}>
-//               <div
-//                 className={mergeClass(
-//                   classes?.dropdown,
-//                   `${loading === "profile" ? classes?.show : classes?.hide}`
-//                 )}
-//               >
-//                 <div className={classes?.dropdownContent}>
-//                   <div className={classes?.profile}>
-//                     <Image
-//                       src={"/images/app-images/svg/profile.svg"}
-//                       fill
-//                       alt="profile"
-//                     />
-//                   </div>
-//                   <div className={classes?.profileName}>John Doe</div>
-//                 </div>
-//               </div>
-//             </ClickAwayListener>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default Header;
-
 "use client";
 
 import { mergeClass } from "@/resources/utils/helper";
@@ -84,7 +20,10 @@ const Header = () => {
   return (
     <div className={classes.Header}>
       <div className="flexBetween">
-        <div className={classes.logo}>
+        <div
+          className={mergeClass("cursor", classes.logo)}
+          onClick={() => router.push("/")}
+        >
           <Image src={"/images/app-images/svg/logo.svg"} alt="logo" fill />
         </div>
         <div className={mergeClass(classes.rightHeader)}>

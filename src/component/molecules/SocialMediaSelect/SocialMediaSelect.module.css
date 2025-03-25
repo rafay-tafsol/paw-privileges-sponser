@@ -11,27 +11,18 @@
   color: red;
   font-size: 15px;
 }
-
-.socialSelectHead button {
-  width: fit-content;
-  background-color: transparent;
-  border: 1px solid var(--main-color) !important;
-  padding: 12px 25px !important;
-  border-radius: 8px;
+.btnLabel {
+  width: 170px;
+  padding: 8px 15px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  cursor: pointer;
 }
 
 .socialSelectHead button svg {
   margin-right: 5px;
-  font-size: 20px;
   fill: var(--main-color);
-  margin-bottom: 5px;
-}
-
-.socialSelectHead button label {
-  color: var(--main-color);
-  font-size: 16px;
-  font-weight: 500;
-  line-height: normal;
+  margin-bottom: 2px;
 }
 
 .socialSelectBody input {
@@ -45,6 +36,17 @@
   flex-wrap: wrap;
   gap: 20px;
   row-gap: 10px;
+}
+.socialInput {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: var(--white-color);
+}
+
+.socialInput input {
+  background-color: transparent;
+  border: none;
 }
 
 .linkTag {

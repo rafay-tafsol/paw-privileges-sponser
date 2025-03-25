@@ -13,6 +13,7 @@ import { SlCloudUpload } from "react-icons/sl";
 import { getSupportedImageTypes } from "@/resources/utils/mediaUpload";
 import { signUpSchema } from "@/formik/schema/SignUpSchema";
 import { useFormik } from "formik";
+import DateInput from "@/component/molecules/DateInput";
 
 const SignUpTemplate = () => {
   const router = useRouter();
@@ -95,26 +96,26 @@ const SignUpTemplate = () => {
 
       <div className="flexColGap">
         <Input
-          name="name"
           placeholder="Wade Warren"
           label="Name"
+          name="name"
           value={SignUpFormik.values.name}
           setValue={SignUpFormik.handleChange("name")}
           errorText={SignUpFormik.touched.name && SignUpFormik.errors.name}
         />
         <Input
-          name="email"
+          label="Email"
           placeholder="Email"
           type="email"
-          label="Email"
+          name="email"
           value={SignUpFormik.values.email}
           setValue={SignUpFormik.handleChange("email")}
           errorText={SignUpFormik.touched.email && SignUpFormik.errors.email}
         />
         <Input
-          name="location"
           placeholder="Monaco"
           label="Location"
+          name="location"
           value={SignUpFormik.values.location}
           setValue={SignUpFormik.handleChange("location")}
           errorText={
@@ -122,9 +123,9 @@ const SignUpTemplate = () => {
           }
         />
         <Input
-          name="contact"
           placeholder="(308) 555-0121"
           label="Contact"
+          name="contact"
           value={SignUpFormik.values.contact}
           setValue={SignUpFormik.handleChange("contact")}
           errorText={
@@ -132,29 +133,38 @@ const SignUpTemplate = () => {
           }
         />
         <Input
-          name="password"
           placeholder="password"
           type="password"
           label="Password"
+          name="password"
           value={SignUpFormik.values.password}
           setValue={SignUpFormik.handleChange("password")}
           errorText={
             SignUpFormik.touched.password && SignUpFormik.errors.password
           }
         />
-        <Input
-          name="date"
+        {/* <Input
           placeholder="10-10-25"
           type="date"
           label="Date"
+          name="date"
+          value={SignUpFormik.values.date}
+          setValue={SignUpFormik.handleChange("date")}
+          errorText={SignUpFormik.touched.date && SignUpFormik.errors.date}
+        /> */}
+        <DateInput
+          label={"Date"}
+          name="date"
+          placeholder="10-10-25"
+          type="date"
           value={SignUpFormik.values.date}
           setValue={SignUpFormik.handleChange("date")}
           errorText={SignUpFormik.touched.date && SignUpFormik.errors.date}
         />
         <TextArea
-          name="description"
           placeholder="Type Description"
           label="Description"
+          name="description"
           value={SignUpFormik.values.description}
           setter={SignUpFormik.handleChange("description")}
           errorText={
@@ -189,13 +199,15 @@ const SignUpTemplate = () => {
           inputLabel="Share Social Link*"
           inputPlaceholder="Enter social media name"
           RightBtn={true}
-          btnLabel="Add Link"
-          btnLeftIcon={<FiPlus />}
+          btnLabel="Add Social Link"
           inputValue={inputValue}
           setInputValue={setInputValue}
           socialLinks={SignUpFormik.values.socialLinks} // Make sure it's coming from Formik
           handleAdd={handleAdd}
           handleRemove={handleRemove}
+          errorText={
+            SignUpFormik.touched.socialLinks && SignUpFormik.errors.socialLinks
+          }
         />
 
         <Button
