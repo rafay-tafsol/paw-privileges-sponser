@@ -87,38 +87,6 @@ export default function CreateOffer() {
           }
         />
 
-        {/* <DropDown
-          placeholder={"Select any"}
-          label={"Target Audience"}
-          value={createOfferFormik.values.targetAudience}
-          setter={(val) =>
-            createOfferFormik.setFieldValue("targetAudience", val)
-          }
-          errorText={
-            createOfferFormik.touched.targetAudience &&
-            createOfferFormik.errors.targetAudience
-          }
-          options={targetAudience?.map((e) => ({
-            label: e?.label,
-            value: e?.value,
-          }))}
-        />
-
-        <DropDown
-          placeholder={"Select any"}
-          label={"Offer Type"}
-          value={createOfferFormik.values.offerType}
-          setter={(val) => createOfferFormik.setFieldValue("offerType", val)}
-          errorText={
-            createOfferFormik.touched.offerType &&
-            createOfferFormik.errors.offerType
-          }
-          options={offerType?.map((e) => ({
-            label: e?.label,
-            value: e?.value,
-          }))}
-        /> */}
-
         <DropDown
           placeholder="Select any"
           label="Target Audience"

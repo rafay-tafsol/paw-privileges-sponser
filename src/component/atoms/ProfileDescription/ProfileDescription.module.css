@@ -86,11 +86,20 @@
 
 .circularImageWrapper {
   position: absolute;
-  top: 120px;
-  left: 7%;
+  top: 185px;
+  left: 5%;
   transform: translateX(-50%);
 }
 
 .circularImage {
   border-radius: 50%;
+}
+
+@media (max-width: 1440px) {
+  .circularImageWrapper {
+    position: absolute;
+    top: 120px;
+    left: 7%;
+    transform: translateX(-50%);
+  }
 }
