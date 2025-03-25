@@ -6,7 +6,6 @@ export const OfferFormSchema = Yup.object().shape({
   endDate: Yup.date()
     .required("End Date is required")
     .min(Yup.ref("startDate"), "End Date cannot be before Start Date"),
-
   targetAudience: Yup.string().required("Target Audience is required"),
   offerType: Yup.string().required("Offer Type is required"),
   location: Yup.string().when("offerType.value", {
