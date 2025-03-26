@@ -135,9 +135,9 @@ const MultiFileUpload = ({
       {label && <p className={`fs-13 mt-3 ${classes.labelStyle}`}>{label}</p>}
       <div
         className={classes.fileInputDiv}
-        style={{
-          ...(containerStyleObject && { ...containerStyleObject }),
-        }}
+        // style={{
+        //   ...(containerStyleObject && { ...containerStyleObject }),
+        // }}
       >
         <div {...getRootProps({ className: "dropzone" })}>
           <input {...getInputProps()} />

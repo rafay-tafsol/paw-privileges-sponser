@@ -10,7 +10,7 @@ const SubscriptionPlanTemplate = () => {
       <div className={"flexColGap"}>
         <Row>
           {subscriptionCardData?.map((data, index) => (
-            <Col md={12} className="my-2" key={index}>
+            <Col md={6} className="my-2" key={index}>
               <SubscriptionCard
                 data={data}
                 isPrimaryBtn={true}

@@ -52,6 +52,17 @@
   overflow: auto;
 }
 
+.childTwo {
+  width: 940px;
+  background-color: var(--Pale-Peach);
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-height: 70vh;
+  overflow: auto;
+}
+
 .logo {
   position: relative;
   width: 200px;

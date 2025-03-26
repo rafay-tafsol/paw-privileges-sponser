@@ -145,9 +145,11 @@ const EditSponsor = () => {
               name="date"
               placeholder="10-10-25"
               type="date"
-              value={SignUpFormik.values.date}
-              setValue={SignUpFormik.handleChange("date")}
-              errorText={SignUpFormik.touched.date && SignUpFormik.errors.date}
+              value={accountFormik.values.date}
+              setValue={accountFormik.handleChange("date")}
+              errorText={
+                accountFormik.touched.date && accountFormik.errors.date
+              }
             />
             {/* <Input
               name="date"

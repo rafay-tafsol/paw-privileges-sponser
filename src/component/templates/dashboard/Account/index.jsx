@@ -16,6 +16,7 @@ import { signUpSchema } from "@/formik/schema/SignUpSchema";
 import { useFormik } from "formik";
 import SocialMediaSelect from "@/component/molecules/SocialMediaSelect";
 import { FiPlus } from "react-icons/fi";
+import DateInput from "@/component/molecules/DateInput";
 
 const AccountTemplate = () => {
   const [documentFiles, setDocumentFiles] = useState([]);
@@ -156,9 +157,11 @@ const AccountTemplate = () => {
               name="date"
               placeholder="10-10-25"
               type="date"
-              value={SignUpFormik.values.date}
-              setValue={SignUpFormik.handleChange("date")}
-              errorText={SignUpFormik.touched.date && SignUpFormik.errors.date}
+              value={accountFormik.values.date}
+              setValue={accountFormik.handleChange("date")}
+              errorText={
+                accountFormik.touched.date && accountFormik.errors.date
+              }
             />
             {/* <Input
               name="date"
