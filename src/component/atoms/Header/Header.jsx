@@ -2,7 +2,7 @@
 
 import { mergeClass } from "@/resources/utils/helper";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { FaAngleDown } from "react-icons/fa6";
 import { IoMdNotificationsOutline } from "react-icons/io";
 import classes from "./Header.module.css";
@@ -12,6 +12,7 @@ import { useState } from "react";
 const Header = () => {
   const router = useRouter();
   const [loading, setLoading] = useState("");
+  const pathname = usePathname()?.toLowerCase() || "";
 
   const handleProfileClick = () => {
     setLoading((prev) => (prev === "profile" ? "" : "profile")); // Toggle popover visibility
@@ -27,11 +28,14 @@ const Header = () => {
           <Image src={"/images/app-images/svg/logo.svg"} alt="logo" fill />
         </div>
         <div className={mergeClass(classes.rightHeader)}>
-          <IoMdNotificationsOutline
-            cursor={"pointer"}
-            fontSize={26}
-            onClick={() => router.push("/notification")}
-          />
+          <span
+            className={pathname === "/notification" ? classes.notifyActive : ""}
+            onClick={() => {
+              router.push("/notification");
+            }}
+          >
+            <IoMdNotificationsOutline cursor="pointer" fontSize={26} />
+          </span>
           <div
             className={mergeClass("flexGap", classes.profileImage)}
             onClick={handleProfileClick}
