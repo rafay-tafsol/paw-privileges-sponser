@@ -1,13 +1,11 @@
 "use client";
 
-import { Get } from "@/interceptor/axios-functions";
 import { baseURL, handleDecrypt } from "@/resources/utils/helper";
 import Cookies from "js-cookie";
 import { useEffect } from "react";
 import { Provider, useDispatch } from "react-redux";
 import { PersistGate } from "redux-persist/lib/integration/react";
 import store, { persistor } from "./";
-import { updateUser } from "./auth/authSlice";
 
 export function AuthProvider({ children }) {
   return (
@@ -44,45 +42,45 @@ export const getUserInfo = async (
     `${role == "2" ? "ClientVerificationCheck" : "VerificationCheck"}` //url change
   );
 
-// Temporarily commented
-//   const [userRes, verifyRes] = await Promise.allSettled([
-//     Get(userUrl, accessToken, false, dispatch),
-//     Get(verifyUrl, accessToken, false, dispatch),
-//   ]);
+  // Temporarily commented
+  //   const [userRes, verifyRes] = await Promise.allSettled([
+  //     Get(userUrl, accessToken, false, dispatch),
+  //     Get(verifyUrl, accessToken, false, dispatch),
+  //   ]);
 
-//   if (userRes?.value || verifyRes?.value) {
-//     const data = userRes?.value?.data?.data;
-//     const verifyData = verifyRes?.value?.data?.data;
+  //   if (userRes?.value || verifyRes?.value) {
+  //     const data = userRes?.value?.data?.data;
+  //     const verifyData = verifyRes?.value?.data?.data;
 
-//     const isVerified =
-//       verifyData?.isRegistrationCompleted &&
-//       verifyData?.isProfessionalCompleted;
+  //     const isVerified =
+  //       verifyData?.isRegistrationCompleted &&
+  //       verifyData?.isProfessionalCompleted;
 
-//     let userInfo = {
-//       isVerified,
-//       ...(data || {}),
-//       ...(verifyData || {}),
-//     };
+  //     let userInfo = {
+  //       isVerified,
+  //       ...(data || {}),
+  //       ...(verifyData || {}),
+  //     };
 
-//     if (isVerified) {
-//       Cookies.set("isVerified", isVerified);
-//       Cookies.set("isSubscribed", userInfo?.isSubscribed);
-//     }
+  //     if (isVerified) {
+  //       Cookies.set("isVerified", isVerified);
+  //       Cookies.set("isSubscribed", userInfo?.isSubscribed);
+  //     }
 
-//     if (userInfo?.userRoleId == "2") {
-//       Cookies.set(
-//         "IsQuestionnaireCompleted",
-//         userInfo?.isQuestionnaireCompleted
-//       );
-//       Cookies.set(
-//         "IsRecommendationQuestionCompleted",
-//         userInfo?.isRecommendationQuestionCompleted
-//       );
-//     }
+  //     if (userInfo?.userRoleId == "2") {
+  //       Cookies.set(
+  //         "IsQuestionnaireCompleted",
+  //         userInfo?.isQuestionnaireCompleted
+  //       );
+  //       Cookies.set(
+  //         "IsRecommendationQuestionCompleted",
+  //         userInfo?.isRecommendationQuestionCompleted
+  //       );
+  //     }
 
-//     Cookies.set("_xpdx_r", userInfo?.userRoleId);
-//     dispatch(updateUser(userInfo));
+  //     Cookies.set("_xpdx_r", userInfo?.userRoleId);
+  //     dispatch(updateUser(userInfo));
 
-//     callback(userInfo);
-//   }
+  //     callback(userInfo);
+  //   }
 };

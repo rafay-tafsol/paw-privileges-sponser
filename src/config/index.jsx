@@ -1,6 +1,4 @@
 export const config = {
   apiBaseUrl: "",
-  // apiBaseUrl: "", // LIVE
-  awsBaseUrl: "", // ! will be changed
-  stripePublicKey: "",
+  awsBaseUrl: "https://scalisi-produce.s3.us-east-2.amazonaws.com", // ! will be changed
 };
