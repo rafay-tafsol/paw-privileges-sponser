@@ -1,8 +1,13 @@
+"use client";
+
 import Button from "@/component/atoms/Button";
 import Input from "@/component/atoms/Input/Input";
 import TextComponent from "@/component/atoms/TextComponent/TextComponent";
+import { useState } from "react";
 
 const ForgetPasswordTemplate = () => {
+  const [value, setValue] = useState();
+
   return (
     <>
       <TextComponent
@@ -13,7 +18,12 @@ const ForgetPasswordTemplate = () => {
       />
       <div>
         <div className={"flexColGap"}>
-          <Input placeholder={"Enter Email"} label={"Email"} />
+          <Input
+            placeholder={"Enter Email"}
+            label={"Email"}
+            value={value}
+            setValue={setValue}
+          />
           <Button variant={"primary"} label={"Send"} />
         </div>
       </div>

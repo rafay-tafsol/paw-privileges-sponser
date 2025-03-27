@@ -17,6 +17,7 @@ import { useFormik } from "formik";
 import SocialMediaSelect from "@/component/molecules/SocialMediaSelect";
 import { FiPlus } from "react-icons/fi";
 import { EditSponsorProfile } from "@/formik/schema/EditSponsorProfile";
+import DateInput from "@/component/molecules/DateInput";
 
 const EditSponsor = () => {
   const [documentFiles, setDocumentFiles] = useState([]);

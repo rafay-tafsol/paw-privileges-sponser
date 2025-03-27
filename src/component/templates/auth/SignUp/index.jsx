@@ -31,6 +31,7 @@ const SignUpTemplate = () => {
 
   const SignUpFormik = useFormik({
     initialValues: {
+      // logo: null,
       name: "",
       email: "",
       location: "",
@@ -38,14 +39,13 @@ const SignUpTemplate = () => {
       password: "",
       date: "",
       description: "",
-      // logo: null,
       gallery: [],
       socialLinks: [],
     },
     validationSchema: signUpSchema,
 
     onSubmit: (values) => {
-      console.log("Formik Errors:", SignUpFormik.errors); // Check if validation is blocking submission
+      console.log("Formik Errors:", SignUpFormik.errors);
       console.log("Form Submitted", values);
     },
   });
@@ -78,11 +78,11 @@ const SignUpTemplate = () => {
 
   return (
     <>
-      {/* <UploadImageBox
+      <UploadImageBox
         containerClass={classes.uploadImageContainerClass}
         hideDeleteIcon={true}
-        state={formData?.image}
         uploadImageBox={classes.uploadImageBox}
+        state={formData?.image}
         setter={(file) => {
           handleUpdate("image", file);
         }}
@@ -92,7 +92,7 @@ const SignUpTemplate = () => {
         onEdit={() => {}}
         imgClass={classes.uploadImage}
         label={"Add Image"}
-      /> */}
+      />
 
       <div className="flexColGap">
         <Input

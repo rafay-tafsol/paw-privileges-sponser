@@ -112,6 +112,7 @@ const OTPTemplate = () => {
         {errorMessage && <p style={{ color: "red" }}>{errorMessage}</p>}
         <Button
           disabled={loading === "loading"}
+          variant={"primary"}
           onClick={handleSubmit}
           label={loading === "loading" ? "Loading..." : "Submit"}
         />

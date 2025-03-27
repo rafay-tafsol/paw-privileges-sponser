@@ -1,6 +1,7 @@
 import * as Yup from "yup";
 
 export const signUpSchema = Yup.object().shape({
+  // logo: Yup.mixed().required("Logo is required"),
   name: Yup.string().required("Name is required"),
   email: Yup.string()
     .email("Invalid email format")
@@ -14,7 +15,7 @@ export const signUpSchema = Yup.object().shape({
     .required("Password is required"),
   date: Yup.date().required("Date is required"),
   description: Yup.string().required("Description is required"),
-  // logo: Yup.mixed().required("Logo is required"),
+
   gallery: Yup.array()
     .of(Yup.mixed())
     .min(1, "At least one image is required")
