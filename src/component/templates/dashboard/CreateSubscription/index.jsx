@@ -4,9 +4,9 @@ import classes from "./CreateSubscription.module.css";
 import BorderWrapper from "@/component/atoms/BorderWrapper";
 import ContentHeader from "@/component/molecules/ContentHeader";
 import Input from "@/component/atoms/Input/Input";
-import ToggleComponent from "@/component/atoms/ToggleComponent";
 import { mergeClass } from "@/resources/utils/helper";
 import Button from "@/component/atoms/Button";
+import ToggleComponent from "@/component/atoms/ToggleComponent";
 
 const CreateSubscriptionTemplate = () => {
   const [isToggled, setIsToggled] = useState(false);
