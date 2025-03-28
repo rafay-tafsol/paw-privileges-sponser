@@ -6,6 +6,8 @@ import Input from "@/component/atoms/Input/Input";
 import ContentHeader from "@/component/molecules/ContentHeader";
 import { mergeClass } from "@/resources/utils/helper";
 import classes from "./Profile.module.css";
+import { useState } from "react";
+import UploadImageBox from "@/component/molecules/UploadImageBox";
 
 const ProfileTemplate = () => {
   const [formData, setFormData] = useState({
