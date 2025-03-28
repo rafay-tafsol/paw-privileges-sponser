@@ -1,6 +1,10 @@
 import OfferDetails from "@/component/templates/dashboard/OfferDetails/OfferDetails";
-import React from "react";
+import React, { Suspense } from "react";
 
 export default function page() {
-  return <OfferDetails />;
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <OfferDetails />
+    </Suspense>
+  );
 }

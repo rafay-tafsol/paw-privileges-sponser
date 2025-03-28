@@ -5,12 +5,9 @@ import ContentHeader from "@/component/molecules/ContentHeader";
 import Image from "next/image";
 import { useState } from "react";
 import classes from "./OfferDetails.module.css";
-
-import ElasticCarousel from "@/component/atoms/ElasticCarousel";
-import { offersData } from "@/developmentContent/developmentData/DummyData";
-import { mergeClass } from "@/resources/utils/helper";
-import { useRouter, useSearchParams } from "next/navigation";
 import { offersDetailData } from "@/developmentContent/developmentData/OfferDetails";
+import { mergeClass } from "@/resources/utils/helper";
+import { usePathname, useSearchParams } from "next/navigation";
 
 export default function OfferDetails() {
   const [data, setData] = useState(offersDetailData);

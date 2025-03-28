@@ -3,11 +3,9 @@
 import React from "react";
 import classes from "./AuthContainer.module.css";
 import Image from "next/image";
-import { useSearchParams } from "next/navigation";
 import { usePathname } from "next/navigation";
 
 const AuthContainer = ({ children }) => {
-  const searchParams = useSearchParams();
   const pathname = usePathname();
 
   return (
