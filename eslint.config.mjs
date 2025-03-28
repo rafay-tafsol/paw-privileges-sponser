@@ -16,6 +16,9 @@ const eslintConfig = [
       ecmaVersion: 2021,
       sourceType: "module",
     },
+    linterOptions: {
+      reportUnusedDisableDirectives: true, // Optional: Helps track unused ESLint disable comments
+    },
   },
 ];
 
