@@ -20,7 +20,7 @@ import { EditSponsorProfile } from "@/formik/schema/EditSponsorProfile";
 import DateInput from "@/component/molecules/DateInput";
 
 const EditSponsor = () => {
-  const [documentFiles, setDocumentFiles] = useState([]);
+  // const [documentFiles, setDocumentFiles] = useState([]);
   const [inputValue, setInputValue] = useState("");
   const [formData, setFormData] = useState({
     image: null,
