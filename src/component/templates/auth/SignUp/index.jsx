@@ -1,19 +1,14 @@
 "use client";
-import { useState } from "react";
 import Button from "@/component/atoms/Button";
 import Input from "@/component/atoms/Input/Input";
 import { TextArea } from "@/component/atoms/TextArea/TextArea";
-import MultiFileUpload from "@/component/molecules/MultiFileUpload/MultiFileUpload";
+import DateInput from "@/component/molecules/DateInput";
 import SocialMediaSelect from "@/component/molecules/SocialMediaSelect";
-import UploadImageBox from "@/component/molecules/UploadImageBox";
-import { useRouter } from "next/navigation";
-import { FiPlus } from "react-icons/fi";
-import classes from "./signUp.module.css";
-import { SlCloudUpload } from "react-icons/sl";
-import { getSupportedImageTypes } from "@/resources/utils/mediaUpload";
 import { signUpSchema } from "@/formik/schema/SignUpSchema";
 import { useFormik } from "formik";
-import DateInput from "@/component/molecules/DateInput";
+import { useRouter } from "next/navigation";
+import { useState } from "react";
+import classes from "./signUp.module.css";
 
 const SignUpTemplate = () => {
   const router = useRouter();
