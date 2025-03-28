@@ -174,7 +174,7 @@ const EditSponsor = () => {
                 accountFormik.errors.description
               }
             />
-            <MultiFileUpload
+            {/* <MultiFileUpload
               extraStyles={{ marginBottom: "10px" }}
               label="Upload Gallery"
               text="Please upload an image with dimensions of 120x170"
@@ -198,7 +198,7 @@ const EditSponsor = () => {
               errorText={
                 accountFormik.touched.gallery && accountFormik.errors.gallery
               }
-            />
+            /> */}
 
             <SocialMediaSelect
               inputLabel="Share Social Link*"
