@@ -24,7 +24,7 @@ const OTPTemplate = () => {
     setOtpValues(newOtpValues);
 
     if (value && index < otpValues.length - 1) {
-      document.getElementById(`otp-input-${index + 1}`)?.focus();
+      document?.getElementById(`otp-input-${index + 1}`)?.focus();
     }
     setErrorMessage("");
   };
@@ -35,7 +35,7 @@ const OTPTemplate = () => {
       newOtpValues[index] = "";
       setOtpValues(newOtpValues);
       if (index > 0) {
-        document.getElementById(`otp-input-${index - 1}`)?.focus();
+        document?.getElementById(`otp-input-${index - 1}`)?.focus();
       }
     }
   };
