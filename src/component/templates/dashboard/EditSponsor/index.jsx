@@ -13,17 +13,18 @@ import { useFormik } from "formik";
 import { useState } from "react";
 import { FiPlus } from "react-icons/fi";
 import classes from "./EditSponsor.module.css";
+import UploadImageBox from "@/component/molecules/UploadImageBox";
 
 const EditSponsor = () => {
   // const [documentFiles, setDocumentFiles] = useState([]);
   const [inputValue, setInputValue] = useState("");
-  // const [formData, setFormData] = useState({
-  //   image: null,
-  // });
-  // // handleUpdate
-  // const handleUpdate = (key, value) => {
-  //   setFormData((prev) => ({ ...prev, [key]: value }));
-  // };
+  const [formData, setFormData] = useState({
+    image: null,
+  });
+  // handleUpdate
+  const handleUpdate = (key, value) => {
+    setFormData((prev) => ({ ...prev, [key]: value }));
+  };
 
   const accountFormik = useFormik({
     initialValues: {
@@ -77,7 +78,7 @@ const EditSponsor = () => {
         <div className={classes.head}>
           <ContentHeader title={"Edit Sponsor"} />
         </div>
-        {/* <UploadImageBox
+        <UploadImageBox
           containerClass={classes.uploadImageContainerClass}
           hideDeleteIcon={true}
           state={formData?.image}
@@ -92,7 +93,7 @@ const EditSponsor = () => {
           imgClass={classes.uploadImage}
           label="Upload Gallery"
           text={"Please upload an image with dimensions of 120x170"}
-        /> */}
+        />
         <div className={classes.inputField}>
           <div className="flexColGap">
             <Input

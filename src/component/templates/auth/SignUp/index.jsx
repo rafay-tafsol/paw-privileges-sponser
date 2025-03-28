@@ -10,11 +10,10 @@ import { useFormik } from "formik";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import classes from "./signUp.module.css";
-import MultiFileUpload from "@/component/molecules/MultiFileUpload/MultiFileUpload";
 
 const SignUpTemplate = () => {
   const router = useRouter();
-  const [imageFiles, setImageFiles] = useState([]);
+  // const [documentFiles, setDocumentFiles] = useState([]);
   const [inputValue, setInputValue] = useState("");
   const [socialLinks, setSocialLinks] = useState([]);
 
@@ -168,7 +167,7 @@ const SignUpTemplate = () => {
             SignUpFormik.touched.description && SignUpFormik.errors.description
           }
         />
-        <MultiFileUpload
+        {/* <MultiFileUpload
           extraStyles={{ marginBottom: "10px" }}
           label="Upload Gallery"
           text="Please upload an image with dimensions of 120x170"
@@ -176,21 +175,21 @@ const SignUpTemplate = () => {
           supportedFiles="(Image Dimensions 1200x170)"
           uploadIcon={<SlCloudUpload size={24} color="var(--Mine-Shaft-500)" />}
           setFiles={(files) => {
-            setImageFiles(files);
+            setDocumentFiles(files);
             SignUpFormik.setFieldValue("gallery", files);
           }}
           acceptedFiles={getSupportedImageTypes("images")}
-          files={imageFiles}
+          files={documentFiles}
           removeFileCb={(key) => {
-            const newDocuments = imageFiles.filter((e) => e !== key);
-            setImageFiles(newDocuments);
+            const newDocuments = documentFiles.filter((e) => e !== key);
+            setDocumentFiles(newDocuments);
             SignUpFormik.setFieldValue("gallery", newDocuments);
           }}
           maxFileCount={5}
           errorText={
             SignUpFormik.touched.gallery && SignUpFormik.errors.gallery
           }
-        />
+        /> */}
 
         <SocialMediaSelect
           inputLabel="Share Social Link*"

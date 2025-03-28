@@ -20,14 +20,14 @@ export default function CreateOffer() {
   // const [documentFiles, setDocumentFiles] = useState([]);
   const [isLoadingWithType, setIsLoadingWithTypes] = useState("");
 
-  // const [formData, setFormData] = useState({
-  //   image: null,
-  // });
+  const [formData, setFormData] = useState({
+    image: null,
+  });
 
-  // // handleUpdate
-  // const handleUpdate = (key, value) => {
-  //   setFormData((prev) => ({ ...prev, [key]: value }));
-  // };
+  // handleUpdate
+  const handleUpdate = (key, value) => {
+    setFormData((prev) => ({ ...prev, [key]: value }));
+  };
 
   const createOfferFormik = useFormik({
     initialValues: {
