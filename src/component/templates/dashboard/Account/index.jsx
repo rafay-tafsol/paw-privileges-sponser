@@ -82,7 +82,7 @@ const AccountTemplate = () => {
         <div className={classes.head}>
           <ContentHeader title={"Account Setting"} />
         </div>
-        <UploadImageBox
+        {/* <UploadImageBox
           containerClass={classes.uploadImageContainerClass}
           hideDeleteIcon={true}
           state={formData?.image}
@@ -97,8 +97,8 @@ const AccountTemplate = () => {
           imgClass={classes.uploadImage}
           label="Upload Gallery"
           text={"Please upload an image with dimensions of 120x170"}
-        />
-        <div className={classes.inputField}>
+        /> */}
+        {/* <div className={classes.inputField}>
           <div className="flexColGap">
             <Input
               name="name"
@@ -163,17 +163,7 @@ const AccountTemplate = () => {
                 accountFormik.touched.date && accountFormik.errors.date
               }
             />
-            {/* <Input
-              name="date"
-              placeholder="10-10-25"
-              type="date"
-              label="Date"
-              value={accountFormik.values.date}
-              setValue={accountFormik.handleChange("date")}
-              errorText={
-                accountFormik.touched.date && accountFormik.errors.date
-              }
-            /> */}
+           
             <TextArea
               name="description"
               placeholder="Type Description"
@@ -242,7 +232,7 @@ const AccountTemplate = () => {
               onClick={accountFormik.handleSubmit}
             />
           </div>
-        </div>
+        </div> */}
       </BorderWrapper>
     </>
   );

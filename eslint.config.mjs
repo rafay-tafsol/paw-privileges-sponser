@@ -23,3 +23,8 @@ const eslintConfig = [
 ];
 
 export default eslintConfig;
+
+// admin
+// login, category
+
+// client reg, client portfolio
