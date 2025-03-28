@@ -8,23 +8,19 @@ import { mergeClass } from "@/resources/utils/helper";
 import classes from "./Profile.module.css";
 
 const ProfileTemplate = () => {
-  // const [documentFiles, setDocumentFiles] = useState([]);
-
-  // const [formData, setFormData] = useState({
-  //   image: null,
-  // });
-  // // handleUpdate
-  // const handleUpdate = (key, value) => {
-  //   setFormData((prev) => ({ ...prev, [key]: value }));
-  // };
+  const [formData, setFormData] = useState({
+    image: null,
+  });
+  const handleUpdate = (key, value) => {
+    setFormData((prev) => ({ ...prev, [key]: value }));
+  };
   return (
     <>
       <BorderWrapper>
         <div className={classes.head}>
           <ContentHeader title={"Profile Setting"} />
         </div>
-        {/* <UploadImage title={"Update Profile"} /> */}
-        {/* <UploadImageBox
+        <UploadImageBox
           containerClass={classes.uploadImageContainerClass}
           hideDeleteIcon={true}
           state={formData?.image}
@@ -35,10 +31,9 @@ const ProfileTemplate = () => {
           onDelete={() => {
             handleUpdate("image", null);
           }}
-          onEdit={() => {}}
           imgClass={classes.uploadImage}
-          label={"Add Image"}
-        /> */}
+          label={"Update Profile"}
+        />
         <div className={classes.inputField}>
           <Input label={"Email"} placeholder={"Enter Email"} />
           <Input
