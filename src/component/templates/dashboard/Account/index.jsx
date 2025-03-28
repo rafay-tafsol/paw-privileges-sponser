@@ -3,20 +3,16 @@
 import BorderWrapper from "@/component/atoms/BorderWrapper";
 import Button from "@/component/atoms/Button";
 import Input from "@/component/atoms/Input/Input";
-import ContentHeader from "@/component/molecules/ContentHeader";
-import UploadImageBox from "@/component/molecules/UploadImageBox";
-import { mergeClass } from "@/resources/utils/helper";
-import classes from "./Account.module.css";
-import { useState } from "react";
-import MultiFileUpload from "@/component/molecules/MultiFileUpload/MultiFileUpload";
 import { TextArea } from "@/component/atoms/TextArea/TextArea";
-import { SlCloudUpload } from "react-icons/sl";
-import { getSupportedImageTypes } from "@/resources/utils/mediaUpload";
-import { signUpSchema } from "@/formik/schema/SignUpSchema";
-import { useFormik } from "formik";
-import SocialMediaSelect from "@/component/molecules/SocialMediaSelect";
-import { FiPlus } from "react-icons/fi";
+import ContentHeader from "@/component/molecules/ContentHeader";
 import DateInput from "@/component/molecules/DateInput";
+import SocialMediaSelect from "@/component/molecules/SocialMediaSelect";
+import { signUpSchema } from "@/formik/schema/SignUpSchema";
+import { mergeClass } from "@/resources/utils/helper";
+import { useFormik } from "formik";
+import { useState } from "react";
+import { FiPlus } from "react-icons/fi";
+import classes from "./Account.module.css";
 
 const AccountTemplate = () => {
   // const [documentFiles, setDocumentFiles] = useState([]);

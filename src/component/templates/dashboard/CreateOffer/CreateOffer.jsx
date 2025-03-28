@@ -1,23 +1,19 @@
 "use client";
 import BorderWrapper from "@/component/atoms/BorderWrapper";
 import Button from "@/component/atoms/Button";
-import { Checkbox } from "@/component/atoms/Checkbox";
 import Input from "@/component/atoms/Input/Input";
 import ContentHeader from "@/component/molecules/ContentHeader";
 import DateInput from "@/component/molecules/DateInput";
 import DropDown from "@/component/molecules/DropDown/DropDown";
-import MultiFileUpload from "@/component/molecules/MultiFileUpload/MultiFileUpload";
 import {
   offerType,
   targetAudience,
 } from "@/developmentContent/developmentData/DropdownData/DropdownData";
-import { getSupportedImageTypes } from "@/resources/utils/mediaUpload";
-import { useState } from "react";
-import { RiAttachment2 } from "react-icons/ri";
-import { SlCloudUpload } from "react-icons/sl";
-import classes from "./CreateOffer.module.css";
 import { OfferFormSchema } from "@/formik/schema/CreateOfferSchema";
 import { useFormik } from "formik";
+import { useState } from "react";
+import { RiAttachment2 } from "react-icons/ri";
+import classes from "./CreateOffer.module.css";
 
 export default function CreateOffer() {
   const [offerLimited, setOfferLimited] = useState(false);

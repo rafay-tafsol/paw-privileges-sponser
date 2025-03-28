@@ -4,10 +4,8 @@ import BorderWrapper from "@/component/atoms/BorderWrapper";
 import Button from "@/component/atoms/Button";
 import Input from "@/component/atoms/Input/Input";
 import ContentHeader from "@/component/molecules/ContentHeader";
-import UploadImageBox from "@/component/molecules/UploadImageBox";
 import { mergeClass } from "@/resources/utils/helper";
 import classes from "./Profile.module.css";
-import { useState } from "react";
 
 const ProfileTemplate = () => {
   // const [documentFiles, setDocumentFiles] = useState([]);
