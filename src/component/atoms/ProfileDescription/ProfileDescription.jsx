@@ -18,7 +18,7 @@ export default function ProfileDescription({ data }) {
   return (
     <div className={classes.mainDiv}>
       <div className={classes.bannerWrapper}>
-        <ElasticCarousel>
+        {/* <ElasticCarousel>
           {data?.headerImg?.map((item, index) => (
             <Image
               key={index}
@@ -30,7 +30,17 @@ export default function ProfileDescription({ data }) {
               className={classes.bannerImage}
             />
           ))}
-        </ElasticCarousel>
+        </ElasticCarousel> */}
+
+        <Image
+          src="/Images/app-images/svg/sponsorCoverPhoto.svg"
+          layout="responsive"
+          width={1200}
+          height={200}
+          alt="Banner"
+          className={classes.bannerImage}
+        />
+
         <div className={classes.circularImageWrapper}>
           <Image
             src="/Images/app-images/svg/sponsorProfileImage.svg"

@@ -21,8 +21,8 @@ export default function OfferDetails() {
   return (
     <BorderWrapper className={classes.wrapper}>
       <ContentHeader title={`Offer Details`} />
-      <ElasticCarousel>
-        {data?.headerImg?.map((item, index) => (
+      {/* <ElasticCarousel>
+         {data?.headerImg?.map((item, index) => (
           <Image
             key={index}
             src={item}
@@ -33,7 +33,16 @@ export default function OfferDetails() {
             className={classes.bannerImage}
           />
         ))}
-      </ElasticCarousel>
+      </ElasticCarousel> */}
+
+      <Image
+        src="/Images/app-images/svg/sponsorCoverPhoto.svg"
+        layout="responsive"
+        width={1200}
+        height={200}
+        alt="Banner"
+        className={classes.bannerImage}
+      />
 
       <div className={mergeClass("flexGap", classes.headDiv)}>
         <h2 className={mergeClass("h2", classes.subHeading)}>
