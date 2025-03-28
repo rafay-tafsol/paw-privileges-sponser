@@ -4,19 +4,16 @@ import Input from "@/component/atoms/Input/Input";
 import { TextArea } from "@/component/atoms/TextArea/TextArea";
 import DateInput from "@/component/molecules/DateInput";
 import SocialMediaSelect from "@/component/molecules/SocialMediaSelect";
+import UploadImageBox from "@/component/molecules/UploadImageBox";
 import { signUpSchema } from "@/formik/schema/SignUpSchema";
 import { useFormik } from "formik";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import classes from "./signUp.module.css";
-import UploadImageBox from "@/component/molecules/UploadImageBox";
-import MultiFileUpload from "@/component/molecules/MultiFileUpload/MultiFileUpload";
-import { SlCloudUpload } from "react-icons/sl";
-import { getSupportedImageTypes } from "@/resources/utils/mediaUpload";
 
 const SignUpTemplate = () => {
   const router = useRouter();
-  const [documentFiles, setDocumentFiles] = useState([]);
+  // const [documentFiles, setDocumentFiles] = useState([]);
   const [inputValue, setInputValue] = useState("");
   const [socialLinks, setSocialLinks] = useState([]);
 
@@ -170,7 +167,7 @@ const SignUpTemplate = () => {
             SignUpFormik.touched.description && SignUpFormik.errors.description
           }
         />
-        <MultiFileUpload
+        {/* <MultiFileUpload
           extraStyles={{ marginBottom: "10px" }}
           label="Upload Gallery"
           text="Please upload an image with dimensions of 120x170"
@@ -192,7 +189,7 @@ const SignUpTemplate = () => {
           errorText={
             SignUpFormik.touched.gallery && SignUpFormik.errors.gallery
           }
-        />
+        /> */}
 
         <SocialMediaSelect
           inputLabel="Share Social Link*"
