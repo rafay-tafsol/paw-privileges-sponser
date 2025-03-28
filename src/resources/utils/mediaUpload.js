@@ -1,5 +1,43 @@
 import { Post } from "@/interceptor/axios-functions";
 
+// export const getSupportedImageTypes = (type = "all") => {
+//   if (type === "all") {
+//     return {
+//       "image/*": [],
+//       "video/*": [],
+//       "application/pdf": [],
+//       "application/msword": [],
+//       "application/vnd.openxmlformats-officedocument.wordprocessingml.document":
+//         [],
+//       "text/plain": [],
+//     };
+//   }
+
+//   if (type === "images") {
+//     return {
+//       "image/*": [],
+//     };
+//   }
+
+//   if (type === "docs") {
+//     return {
+//       "application/pdf": [],
+//       "application/msword": [],
+//       "application/vnd.openxmlformats-officedocument.wordprocessingml.document":
+//         [],
+//       "text/plain": [],
+//     };
+//   }
+
+//   if (type === "pdf") {
+//     return {
+//       "application/pdf": [],
+//     };
+//   }
+
+//   return {};
+// };
+
 export const getSupportedImageTypes = (type = "all") => {
   if (type === "all") {
     return {
