@@ -3,32 +3,27 @@
 import BorderWrapper from "@/component/atoms/BorderWrapper";
 import Button from "@/component/atoms/Button";
 import Input from "@/component/atoms/Input/Input";
-import ContentHeader from "@/component/molecules/ContentHeader";
-import UploadImageBox from "@/component/molecules/UploadImageBox";
-import { mergeClass } from "@/resources/utils/helper";
-import classes from "./EditSponsor.module.css";
-import { useState } from "react";
-import MultiFileUpload from "@/component/molecules/MultiFileUpload/MultiFileUpload";
 import { TextArea } from "@/component/atoms/TextArea/TextArea";
-import { SlCloudUpload } from "react-icons/sl";
-import { getSupportedImageTypes } from "@/resources/utils/mediaUpload";
-import { signUpSchema } from "@/formik/schema/SignUpSchema";
-import { useFormik } from "formik";
-import SocialMediaSelect from "@/component/molecules/SocialMediaSelect";
-import { FiPlus } from "react-icons/fi";
-import { EditSponsorProfile } from "@/formik/schema/EditSponsorProfile";
+import ContentHeader from "@/component/molecules/ContentHeader";
 import DateInput from "@/component/molecules/DateInput";
+import SocialMediaSelect from "@/component/molecules/SocialMediaSelect";
+import { EditSponsorProfile } from "@/formik/schema/EditSponsorProfile";
+import { mergeClass } from "@/resources/utils/helper";
+import { useFormik } from "formik";
+import { useState } from "react";
+import { FiPlus } from "react-icons/fi";
+import classes from "./EditSponsor.module.css";
 
 const EditSponsor = () => {
   // const [documentFiles, setDocumentFiles] = useState([]);
   const [inputValue, setInputValue] = useState("");
-  const [formData, setFormData] = useState({
-    image: null,
-  });
-  // handleUpdate
-  const handleUpdate = (key, value) => {
-    setFormData((prev) => ({ ...prev, [key]: value }));
-  };
+  // const [formData, setFormData] = useState({
+  //   image: null,
+  // });
+  // // handleUpdate
+  // const handleUpdate = (key, value) => {
+  //   setFormData((prev) => ({ ...prev, [key]: value }));
+  // };
 
   const accountFormik = useFormik({
     initialValues: {
@@ -82,7 +77,7 @@ const EditSponsor = () => {
         <div className={classes.head}>
           <ContentHeader title={"Edit Sponsor"} />
         </div>
-        <UploadImageBox
+        {/* <UploadImageBox
           containerClass={classes.uploadImageContainerClass}
           hideDeleteIcon={true}
           state={formData?.image}
@@ -97,7 +92,7 @@ const EditSponsor = () => {
           imgClass={classes.uploadImage}
           label="Upload Gallery"
           text={"Please upload an image with dimensions of 120x170"}
-        />
+        /> */}
         <div className={classes.inputField}>
           <div className="flexColGap">
             <Input
