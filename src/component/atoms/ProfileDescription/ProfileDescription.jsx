@@ -33,7 +33,7 @@ export default function ProfileDescription({ data }) {
         </ElasticCarousel> */}
 
         <Image
-          src="/Images/app-images/svg/sponsorCoverPhoto.svg"
+          src="/images/app-images/svg/sponsorCoverPhoto.svg"
           layout="responsive"
           width={1200}
           height={200}
@@ -43,7 +43,7 @@ export default function ProfileDescription({ data }) {
 
         <div className={classes.circularImageWrapper}>
           <Image
-            src="/Images/app-images/svg/sponsorProfileImage.svg"
+            src="/images/app-images/svg/sponsorProfileImage.svg"
             width={120}
             height={120}
             alt="Circular"

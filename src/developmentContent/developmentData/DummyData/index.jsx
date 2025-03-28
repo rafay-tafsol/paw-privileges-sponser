@@ -194,28 +194,28 @@ export const notificationsData = [
 ];
 
 export const availablePuppies = [
-  { image: "/Images/app-images/svg/availablePuppy1.svg" },
-  { image: "/Images/app-images/svg/availablePuppy2.svg" },
-  { image: "/Images/app-images/svg/availablePuppy3.svg" },
+  { image: "/images/app-images/svg/availablePuppy1.svg" },
+  { image: "/images/app-images/svg/availablePuppy2.svg" },
+  { image: "/images/app-images/svg/availablePuppy3.svg" },
 ];
 
 export const offersCardData = [
   {
     title: "Free Grooming Session For Breeders",
     location: "Saint Barthélemy",
-    image: "/Images/app-images/svg/offersImage.svg",
+    image: "/images/app-images/svg/offersImage.svg",
     availableDate: "10/12/25",
   },
   {
     title: "Free Grooming Session For Breeders",
     location: "Saint Barthélemy",
-    image: "/Images/app-images/svg/offersImage.svg",
+    image: "/images/app-images/svg/offersImage.svg",
     availableDate: "10/12/25",
   },
   {
     title: "Free Grooming Session For Breeders",
     location: "Saint Barthélemy",
-    image: "/Images/app-images/svg/offersImage.svg",
+    image: "/images/app-images/svg/offersImage.svg",
     availableDate: "10/12/25",
   },
 ];
@@ -223,8 +223,8 @@ export const offersCardData = [
 export const offersData = [
   {
     headerImg: [
-      "/Images/app-images/png/cover1.png",
-      "/Images/app-images/png/cover2.png",
+      "/images/app-images/png/cover1.png",
+      "/images/app-images/png/cover2.png",
     ],
   },
   {

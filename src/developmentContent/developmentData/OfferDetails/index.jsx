@@ -5,8 +5,8 @@ import { TbTag } from "react-icons/tb";
 
 export const offersDetailData = {
   headerImg: [
-    "/Images/app-images/png/cover1.png",
-    "/Images/app-images/png/cover2.png",
+    "/images/app-images/png/cover1.png",
+    "/images/app-images/png/cover2.png",
   ],
 
   offerDetail: [

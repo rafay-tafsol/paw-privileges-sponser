@@ -12,7 +12,7 @@ const AuthContainer = ({ children }) => {
     <div className={classes.authParent}>
       <div className={classes.mainChildren}>
         <div className={classes.logo}>
-          <Image src={"/Images/app-images/svg/logo.svg"} fill alt="logo" />
+          <Image src={"/images/app-images/svg/logo.svg"} fill alt="logo" />
         </div>
         <div
           className={

@@ -1,7 +1,7 @@
 export const sponsorProfileData = {
   headerImg: [
-    "/Images/app-images/png/cover1.png",
-    "/Images/app-images/png/cover2.png",
+    "/images/app-images/png/cover1.png",
+    "/images/app-images/png/cover2.png",
   ],
 
   profileDetail: {
@@ -21,19 +21,19 @@ export const sponsorProfileData = {
     {
       title: "Free Grooming Session For Breeders",
       location: "Saint Barthélemy",
-      image: "/Images/app-images/svg/offersImage.svg",
+      image: "/images/app-images/svg/offersImage.svg",
       availableDate: "10/12/25",
     },
     {
       title: "Free Grooming Session For Breeders",
       location: "Saint Barthélemy",
-      image: "/Images/app-images/svg/offersImage.svg",
+      image: "/images/app-images/svg/offersImage.svg",
       availableDate: "10/12/25",
     },
     {
       title: "Free Grooming Session For Breeders",
       location: "Saint Barthélemy",
-      image: "/Images/app-images/svg/offersImage.svg",
+      image: "/images/app-images/svg/offersImage.svg",
       availableDate: "10/12/25",
     },
   ],

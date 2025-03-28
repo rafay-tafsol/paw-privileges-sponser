@@ -33,7 +33,7 @@ export default function OfferDetails() {
       </ElasticCarousel> */}
 
       <Image
-        src="/Images/app-images/svg/sponsorCoverPhoto.svg"
+        src="/images/app-images/svg/sponsorCoverPhoto.svg"
         layout="responsive"
         width={1200}
         height={200}
