@@ -10,15 +10,15 @@ import classes from "./Profile.module.css";
 import { useState } from "react";
 
 const ProfileTemplate = () => {
-  const [documentFiles, setDocumentFiles] = useState([]);
+  // const [documentFiles, setDocumentFiles] = useState([]);
 
-  const [formData, setFormData] = useState({
-    image: null,
-  });
-  // handleUpdate
-  const handleUpdate = (key, value) => {
-    setFormData((prev) => ({ ...prev, [key]: value }));
-  };
+  // const [formData, setFormData] = useState({
+  //   image: null,
+  // });
+  // // handleUpdate
+  // const handleUpdate = (key, value) => {
+  //   setFormData((prev) => ({ ...prev, [key]: value }));
+  // };
   return (
     <>
       <BorderWrapper>
@@ -26,7 +26,7 @@ const ProfileTemplate = () => {
           <ContentHeader title={"Profile Setting"} />
         </div>
         {/* <UploadImage title={"Update Profile"} /> */}
-        <UploadImageBox
+        {/* <UploadImageBox
           containerClass={classes.uploadImageContainerClass}
           hideDeleteIcon={true}
           state={formData?.image}
@@ -40,7 +40,7 @@ const ProfileTemplate = () => {
           onEdit={() => {}}
           imgClass={classes.uploadImage}
           label={"Add Image"}
-        />
+        /> */}
         <div className={classes.inputField}>
           <Input label={"Email"} placeholder={"Enter Email"} />
           <Input

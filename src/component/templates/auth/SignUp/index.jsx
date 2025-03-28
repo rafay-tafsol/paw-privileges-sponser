@@ -17,17 +17,17 @@ import DateInput from "@/component/molecules/DateInput";
 
 const SignUpTemplate = () => {
   const router = useRouter();
-  const [documentFiles, setDocumentFiles] = useState([]);
+  // const [documentFiles, setDocumentFiles] = useState([]);
   const [inputValue, setInputValue] = useState("");
   const [socialLinks, setSocialLinks] = useState([]);
 
-  const [formData, setFormData] = useState({
-    image: null,
-  });
-  // handleUpdate
-  const handleUpdate = (key, value) => {
-    setFormData((prev) => ({ ...prev, [key]: value }));
-  };
+  // const [formData, setFormData] = useState({
+  //   image: null,
+  // });
+  // // handleUpdate
+  // const handleUpdate = (key, value) => {
+  //   setFormData((prev) => ({ ...prev, [key]: value }));
+  // };
 
   const SignUpFormik = useFormik({
     initialValues: {
@@ -78,7 +78,7 @@ const SignUpTemplate = () => {
 
   return (
     <>
-      <UploadImageBox
+      {/* <UploadImageBox
         containerClass={classes.uploadImageContainerClass}
         hideDeleteIcon={true}
         uploadImageBox={classes.uploadImageBox}
@@ -92,7 +92,7 @@ const SignUpTemplate = () => {
         onEdit={() => {}}
         imgClass={classes.uploadImage}
         label={"Add Image"}
-      />
+      /> */}
 
       <div className="flexColGap">
         <Input
@@ -171,7 +171,7 @@ const SignUpTemplate = () => {
             SignUpFormik.touched.description && SignUpFormik.errors.description
           }
         />
-        <MultiFileUpload
+        {/* <MultiFileUpload
           extraStyles={{ marginBottom: "10px" }}
           label="Upload Gallery"
           text="Please upload an image with dimensions of 120x170"
@@ -193,7 +193,7 @@ const SignUpTemplate = () => {
           errorText={
             SignUpFormik.touched.gallery && SignUpFormik.errors.gallery
           }
-        />
+        /> */}
 
         <SocialMediaSelect
           inputLabel="Share Social Link*"
