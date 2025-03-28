@@ -9,10 +9,14 @@ import { useFormik } from "formik";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import classes from "./signUp.module.css";
+import UploadImageBox from "@/component/molecules/UploadImageBox";
+import MultiFileUpload from "@/component/molecules/MultiFileUpload/MultiFileUpload";
+import { SlCloudUpload } from "react-icons/sl";
+import { getSupportedImageTypes } from "@/resources/utils/mediaUpload";
 
 const SignUpTemplate = () => {
   const router = useRouter();
-  // const [documentFiles, setDocumentFiles] = useState([]);
+  const [documentFiles, setDocumentFiles] = useState([]);
   const [inputValue, setInputValue] = useState("");
   const [socialLinks, setSocialLinks] = useState([]);
 
