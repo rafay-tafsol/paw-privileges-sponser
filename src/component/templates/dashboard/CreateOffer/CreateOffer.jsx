@@ -14,10 +14,14 @@ import { useFormik } from "formik";
 import { useState } from "react";
 import { RiAttachment2 } from "react-icons/ri";
 import classes from "./CreateOffer.module.css";
+import MultiFileUpload from "@/component/molecules/MultiFileUpload/MultiFileUpload";
+import { SlCloudUpload } from "react-icons/sl";
+import { getSupportedImageTypes } from "@/resources/utils/mediaUpload";
+import { Checkbox } from "@/component/atoms/Checkbox";
 
 export default function CreateOffer() {
   const [offerLimited, setOfferLimited] = useState(false);
-  // const [documentFiles, setDocumentFiles] = useState([]);
+  const [documentFiles, setDocumentFiles] = useState([]);
   const [isLoadingWithType, setIsLoadingWithTypes] = useState("");
 
   const [formData, setFormData] = useState({
@@ -117,23 +121,6 @@ export default function CreateOffer() {
           }))}
         />
 
-        {/* <DropDown
-          placeholder="Select any"
-          label="Offer Type"
-          value={createOfferFormik.values.offerType?.value} // Ensure value is a string
-          setter={(val) =>
-            createOfferFormik.setFieldValue("offerType", val?.value)
-          } // Store only the value
-          errorText={
-            createOfferFormik.touched.offerType &&
-            createOfferFormik.errors.offerType
-          }
-          options={offerType?.map((e) => ({
-            label: e.label,
-            value: e.value,
-          }))}
-        /> */}
-
         {createOfferFormik.values.offerType === "in-person" && (
           <Input
             label={"Location"}
@@ -161,25 +148,19 @@ export default function CreateOffer() {
           />
         )}
 
-        {/* 
         <Checkbox
-          value={createOfferFormik.values.offerLimited}
+          value={createOfferFormik.values.offerLimited ? "Limited Offer" : ""}
           setValue={(newValue) =>
-            // createOfferFormik.setFieldValue(
-            //   "offerLimited",
-            //   newValue === "Limited Offer" ? true : false
-            // )
-            createOfferFormik.setFieldValue("offerLimited", newValue)
+            createOfferFormik.setFieldValue(
+              "offerLimited",
+              newValue === "Limited Offer"
+            )
           }
           label="Limited Offer"
           checkboxDiv={classes.labelClass}
           checkMarkStyle={classes.checkMarkBox}
           title="Offer Tag"
-          errorText={
-            createOfferFormik.touched.offerLimited &&
-            createOfferFormik.errors.offerLimited
-          }
-        /> */}
+        />
 
         <div className={classes.customLabel}>
           <label className={`${[classes.labelText].join(" ")}`}>Discount</label>
@@ -208,14 +189,13 @@ export default function CreateOffer() {
             />
           </div>
         </div>
-        {/* <MultiFileUpload
+        <MultiFileUpload
           extraStyles={{ marginBottom: "10px" }}
           label="Upload Gallery"
           text="Please upload an image with dimensions of 120x170"
           uploadText="Browse and choose the files you want to upload from your computer"
           supportedFiles="(Image Dimensions 1200x170)"
           uploadIcon={<SlCloudUpload size={24} color="var(--Mine-Shaft-500)" />}
-          // setFiles={(files) => handleUploadMedia(files)}
           setFiles={(files) => {
             setDocumentFiles(files);
             createOfferFormik.setFieldValue("gallery", files);
@@ -232,7 +212,7 @@ export default function CreateOffer() {
             createOfferFormik.touched.gallery &&
             createOfferFormik.errors.gallery
           }
-        /> */}
+        />
 
         <div className={classes.buttonDiv}>
           <Button

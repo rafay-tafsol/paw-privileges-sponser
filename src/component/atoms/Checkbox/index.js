@@ -2,7 +2,6 @@
 
 import { mergeClass } from "@/resources/utils/helper";
 import classes from "./Checkbox.module.css";
-import PropTypes from "prop-types";
 
 export const Checkbox = ({
   value,
@@ -14,6 +13,7 @@ export const Checkbox = ({
   checkMarkStyle,
   checkboxDiv,
   title,
+  onClick = () => {},
 }) => {
   const checkValueTypeArray = Array.isArray(value);
   const isChecked = checkValueTypeArray
@@ -79,6 +79,8 @@ export const Checkbox = ({
                     "checked"
               }
               disabled={disabled}
+              // onCLick={() => {}}
+              onChange={onClick}
               id={`checkbox${label}`}
             />
             <span
@@ -117,15 +119,15 @@ export const Checkbox = ({
   );
 };
 
-Checkbox.propTypes = {
-  value: PropTypes.array,
-  setValue: PropTypes.func,
-  disabled: PropTypes.bool,
-  label: PropTypes.string,
-  labelStyle: PropTypes.object,
-};
-Checkbox.defaultProps = {
-  value: [],
-  disabled: false,
-  label: null,
-};
+// Checkbox.propTypes = {
+//   value: PropTypes.array,
+//   setValue: PropTypes.func,
+//   disabled: PropTypes.bool,
+//   label: PropTypes.string,
+//   labelStyle: PropTypes.object,
+// };
+// Checkbox.defaultProps = {
+//   value: [],
+//   disabled: false,
+//   label: null,
+// };
