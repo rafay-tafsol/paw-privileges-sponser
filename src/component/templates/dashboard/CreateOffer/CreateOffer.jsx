@@ -14,10 +14,14 @@ import { useFormik } from "formik";
 import { useState } from "react";
 import { RiAttachment2 } from "react-icons/ri";
 import classes from "./CreateOffer.module.css";
-import MultiFileUpload from "@/component/molecules/MultiFileUpload/MultiFileUpload";
 import { SlCloudUpload } from "react-icons/sl";
 import { getSupportedImageTypes } from "@/resources/utils/mediaUpload";
 import { Checkbox } from "@/component/atoms/Checkbox";
+import dynamic from "next/dynamic";
+const MultiFileUpload = dynamic(
+  () => import("@/component/molecules/MultiFileUpload/MultiFileUpload"),
+  { ssr: false }
+);
 
 export default function CreateOffer() {
   const [offerLimited, setOfferLimited] = useState(false);

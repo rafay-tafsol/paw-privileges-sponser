@@ -1,5 +1,4 @@
 "use client";
-import LottieLoader from "@/component/atoms/LottieLoader/LottieLoader";
 import RenderToast from "@/component/atoms/RenderToast";
 import { Patch } from "@/interceptor/axios-functions";
 import { mediaUrl } from "@/resources/utils/helper";
@@ -14,6 +13,12 @@ import { BsFillPlusSquareFill } from "react-icons/bs";
 import { FaFileContract } from "react-icons/fa";
 import { IoCloseOutline } from "react-icons/io5";
 import classes from "./MultiFileUpload.module.css";
+// import LottieLoader from "@/component/atoms/LottieLoader/LottieLoader";
+import dynamic from "next/dynamic";
+const LottieLoader = dynamic(
+  () => import("@/component/atoms/LottieLoader/LottieLoader"),
+  { ssr: false }
+);
 
 const MultiFileUpload = ({
   label,
