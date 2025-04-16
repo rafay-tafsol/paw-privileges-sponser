@@ -13,10 +13,11 @@ const Header = () => {
   const router = useRouter();
   const [loading, setLoading] = useState("");
   const pathname = usePathname()?.toLowerCase() || "";
+  const [show, setShow] = useState(false);
 
-  const handleProfileClick = () => {
-    setLoading((prev) => (prev === "profile" ? "" : "profile")); // Toggle popover visibility
-  };
+  // const handleProfileClick = () => {
+  //   setLoading((prev) => (prev === "profile" ? "" : "profile")); // Toggle popover visibility
+  // };
 
   return (
     <div className={classes.Header}>
@@ -38,7 +39,7 @@ const Header = () => {
           </span>
           <div
             className={mergeClass("flexGap", classes.profileImage)}
-            onClick={handleProfileClick}
+            onClick={() => setShow((prev) => !prev)}
           >
             <div className={classes.profile}>
               <Image
@@ -51,9 +52,12 @@ const Header = () => {
           </div>
 
           {/* Popover */}
-          {loading === "profile" && (
-            <ClickAwayListener onClickAway={() => setLoading("")}>
-              <div className={mergeClass(classes.dropdown, classes.show)}>
+          {show && (
+            <ClickAwayListener onClickAway={() => setShow(false)}>
+              <div
+                className={mergeClass(classes.dropdown, classes.show)}
+                onClick={() => setShow(false)}
+              >
                 <p onClick={() => router.push("/account-setting")}>
                   Account Setting
                 </p>
