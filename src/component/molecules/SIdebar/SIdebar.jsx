@@ -10,6 +10,7 @@ import classes from "./SIdebar.module.css";
 import { signOutRequest } from "@/store/auth/authSlice";
 
 const Sidebar = () => {
+  const router = useRouter();
   // const onLogout = () => {
   //   dispatch(signOutRequest());
   //   Cookies.remove("_xpdx");
@@ -26,7 +27,11 @@ const Sidebar = () => {
         })}
       </div>
       <div className={classes.btnMain}>
-        <Button variant={"primary"} label={"Logout"} />
+        <Button
+          variant={"primary"}
+          label={"Logout"}
+          onClick={() => router.push("/auth/sign-in")}
+        />
       </div>
     </div>
   );
