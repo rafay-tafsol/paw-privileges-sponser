@@ -21,6 +21,8 @@ const SignInTemplate = () => {
     validationSchema: signInSchema,
     onSubmit: (values) => {
       console.log("Form Submitted", values);
+      // redirect to home page
+      router.push("/");
     },
   });
 
